@@ -3,7 +3,7 @@
 #include <locale.h>
 
 /*
-   Figura 6.3: fig06_03.c  2 Inicializando um array
+   Figura 6.3: fig06_03.c  2  Inicializando um array
    Deitel, Paul; Deitel, Harvey. C Como Programar
    (Portuguese Edition) (p. 163). Edição do Kindle.
    21/09/2024
