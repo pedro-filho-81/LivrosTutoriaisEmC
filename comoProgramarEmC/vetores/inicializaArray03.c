@@ -2,17 +2,17 @@
 #include <stdio.h>
 #include <locale.h>
 #define SIZE 10
-// função principal
+// funï¿½ï¿½o principal
 int main()
 {
-    setlocale( LC_ALL, "portuguese"); // localização geográfica
+    setlocale( LC_ALL, "portuguese"); // localizaï¿½ï¿½o geogrï¿½fica
 
-    system("cls"); // limpa a tela
+    // system("cls"); // limpa a tela
 
     // array
     int n[SIZE] = {10, 20, 32, 45, 63, 84, 47, 39, 58, 13};
     
-    // VARIÁVEIS
+    // VARIï¿½VEIS
     int i;
     
     printf("vetor n:\n");
@@ -22,7 +22,7 @@ int main()
       printf( "%5d\n", n[i]); // imprime na tela e pula uma linha
     } // end for
 
-    system("pause"); // pausa do programa
+//    system("pause"); // pausa do programa
 
     return 0; // programa terminado com sucesso
 
