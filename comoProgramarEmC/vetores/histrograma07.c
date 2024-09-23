@@ -5,10 +5,10 @@
 
 #define SIZE 10
 
-// funÁ„o principal
+// fun√ß√£o principal
 int main()
 {
-    setlocale( LC_ALL, "portuguese"); // localizaÁ„o geogr·fica
+    setlocale( LC_ALL, "portuguese"); // localiza√ß√£o geogr√°fica
 
     system("cls"); // limpa a tela
 
@@ -20,7 +20,7 @@ int main()
     
     // loop for
     for(i = 0; i < SIZE; i++) {
-      // exibe Ìndice, valor e espaÁos
+      // exibe ÔøΩndice, valor e espaÔøΩos
       printf("%7d%13d%7s", i, n[i], "       ");    
       
       // loop for histrograma
@@ -33,7 +33,7 @@ int main()
        printf("\n");
     } // end for
     
-    printf( "Ol·, Mundo C!\n"); // imprime na tela e pula uma linha
+    printf( "Ol√°, Mundo C!\n"); // imprime na tela e pula uma linha
 
     system("pause"); // pausa do programa
 
