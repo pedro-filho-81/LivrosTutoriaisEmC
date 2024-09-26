@@ -49,12 +49,12 @@ int main() {
           */
          // se o elemento anterior for  maior
          // que o elemento posterior
-         if (vetor[i] > vetor[i + 1])
+         if (vetor[i] > vetor[i + 1]) // se verdade
          {
             // troca os elementos
             temp = vetor[i]; // temporário recebe o valor do elemento anteriro
             vetor[i] = vetor[i + 1]; // local anterior recebe valor posterior
-            vetor[i + 1] = temp; // local posterior recebe valor temporário
+            vetor[i + 1] = temp; // local posterior recebe valor temporário (valor anterior)
          } // end if         
       } // end for i
    } // end for passada
