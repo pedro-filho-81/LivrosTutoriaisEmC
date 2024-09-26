@@ -4,28 +4,28 @@
 #include <locale.h>
 #define SIZE 10
 
-// função principal
+// funï¿½ï¿½o principal
 int main()
 {
-    setlocale( LC_ALL, "portuguese"); // localização geográfica
+    setlocale( LC_ALL, "portuguese"); // localizaï¿½ï¿½o geogrï¿½fica
 
     system("cls"); // limpa a tela
     
     // vetor
     int vetor[SIZE];
     
-    // VARIÁVEL
+    // VARIï¿½VEL
     int i;
     
     // inicializa vetor
-    for(i = 2; i <= 20; i += 2) {
+    for(i = 2; i <= 10; i += 2) {
       vetor[i] = i;
     } // end for 
     
     printf("%s\n", "Valores:");
     
     // loop para exibir
-    for(i = 2; i <= 20; i += 2) {
+    for(i = 2; i <= 10; i += 2) {
       printf( "%5d\n", vetor[i]); // imprime na tela e pula uma linha
     } // end for
     
