@@ -5,26 +5,26 @@
 /*
    Figura 6.3: fig06_03.c  2  Inicializando um array
    Deitel, Paul; Deitel, Harvey. C Como Programar
-   (Portuguese Edition) (p. 163). Edição do Kindle.
+   (Portuguese Edition) (p. 163). Ediï¿½ï¿½o do Kindle.
    21/09/2024
 */
 int main() {
 
-   setlocale(LC_ALL, "portuguese");
+   setlocale(LC_ALL, "Portuguese");
 
    // vetor
    int n[10];
 
-   // variável
+   // variï¿½vel
    int i;
 
    // loop for para inicializar vetor com 10 zeros
-   for(i - 0; i < 10; i++) {
+   for(i = 0; i < 10; i++) {
       n[i] = 0;
    } // end for
 
-   // cabeçalho
-   printf("%s%13s\n", "Elemento", "Valor");
+   // cabeï¿½alho
+   printf("%s%13s\n", "Posicao", "Valor");
 
    // loop para exibir os valores do vetor
    for(i = 0; i < 10; i++) {
