@@ -23,10 +23,10 @@ int main()
                   {70, 90, 86, 81}
                };
 
-   printf("O array e: \n");
+   printf("\nO array e: \n");
    printArray(studentGrades, STUDENTS, EXAmS);
 
-   printf("maior nota = %d\nmenor nota = %d\n",
+   printf("\n\nmaior nota = %d\nmenor nota = %d\n",
             maximum(studentGrades, STUDENTS, EXAmS),
             minimum(studentGrades, STUDENTS, EXAmS));
 
@@ -89,3 +89,22 @@ double average(const int setOfGrades[], int test)
    return (double) total / test;
    
 } // end average
+
+// printArray
+void printArray(const int grades[][EXAmS], int pupils, int tests)
+{
+   int i, j;
+
+   // cabeçalho da coluna
+   printf("             [1]  [2]  [3]  [4]");
+
+   for ( i = 0; i < pupils; i++)
+   {
+      printf("\nstudent[%d]   ", i);
+
+      for ( j = 0; j < tests; j++)
+      {
+         printf("%-5d", grades[i][j]);
+      } // end for j      
+   } // end for i   
+} // end printArray
