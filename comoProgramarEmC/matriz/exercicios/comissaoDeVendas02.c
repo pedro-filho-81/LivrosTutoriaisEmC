@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 /*
     6.10 Comissões de vendas. Use um array com subscrito único para resolver
     o problema a seguir. Uma empresa paga o  salário de seus vendedores com
@@ -12,101 +15,51 @@
     Autor: Pedro Filho, 03/10/2024
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
-
 #define SIZE 10
-#define FREQ_SIZE 11
 
-// função principal
 int main()
 {
-    // localização geográfica
-    setlocale( LC_ALL, "portuguese");
+    // constante
+    const int fixo = 200;
+    const float percent = 0.09;
 
-    // limpa a tela
-    system("cls");
+    // vetores
+    int vendedor[SIZE];
+    int vlVendido[SIZE];
+    float salario[SIZE];
+    float comissao[SIZE];
 
-    // const
-    const int salarioFixo = 200;
+    // variáveis
+    int i, count = SIZE;
 
-    // array
-    int salario[ SIZE ];
-    int valorComissao[ SIZE ];
-    int frequencia[ FREQ_SIZE ] = {0};
-
-    // variable
-    int vendasBrutas = 0;
-
-    // header
-    printf( "\tPAGAMENTO DAS COMISSÕES\n" );
-
-    // loop to add values to vector
-    for( int valor = 0; valor < SIZE; valor++ )
+    system("cls"); // limpa tela
+    
+    // entrada de dados
+    printf("\tENTRADA DE DADOS\n");
+    for ( i = 0; i < count; i++)
     {
-        // data input
-        printf( "Informe valor das vendas brutas do vendedor %d R$ ", valor + 1 );
-        scanf( "%d", &vendasBrutas ); // user input
+        printf("Vendedor %2d digite o total vendido R$ ", i + 1);
+        scanf("%d", &vlVendido[i]);
+        
+        // atribui valores aos vetores
+        vendedor[i] = i + 1;
+        comissao[i] = vlVendido[i] * percent;
+        salario[i] = comissao[i] + fixo;
+    } // end for 
 
-        // calculation
-        valorComissao[ valor ] = vendasBrutas * 9 / 100;
+    // relatório das comissões
+    printf("\n\t\tRELATORIO DAS COmISSOES\n");
 
-        // array receives current salary
-        salario[ valor ] = salarioFixo + valorComissao[ valor ];
+    // header cabeçalho
+    printf("%s%15s%15s%12s%15s\n", "Vendedor", "Vl Vendido", "Comissao", "Fixo", "Salario");
 
-    } // end for
-
-    printf( "\n\tTABELA DE SALÁRIO" );
-
-    // header
-    printf( "\n%20s%13s%13s", "R$ Fixo", "R$ Comissão", "R$ Salário\n" );
-
-    // loop to show vector value
-    for( int valor = 0; valor < SIZE; valor++ )
+    // loop for para exibir valores dos vetores
+    for ( i = 0; i < count; i++)
     {
-        printf( "Vendedor %d %6d%12d%15d\n",
-                    valor, salarioFixo, valorComissao[ valor ], salario[ valor ] );
-    } // end for
+        printf("%5d%15d%18.2f%12d%15.2f\n", vendedor[i], vlVendido[i], comissao[i], fixo, salario[i]);
+    } // end for exibir
+    // pula linha
+    printf("\n");
 
-    // loop to add value to the frequencia vector
-    for( int valor = 0; valor < SIZE; valor++ )
-        ++frequencia[ salario[ valor ] / 100 ];
-
-    printf( "\n\tBARRA DE ASTERISCO\n" );
-
-    // loop to show bar char
-    for( int asterisco = 0; asterisco < FREQ_SIZE; asterisco++ )
-    {
-        if( asterisco == 0 )
-        {
-            printf( "  R$ 200 - R$ 299:  " );
-        } // end if
-        else if( asterisco == 10 )
-        {
-            printf( "          R$ 1000:  " );
-            for( int maiorOuIgual = 0; maiorOuIgual < SIZE; maiorOuIgual++ )
-                if( salario[ maiorOuIgual ] >= 1100 )
-                    printf( "*" );
-        } // end else if
-        else
-        {
-            if( asterisco >= 3 )
-                printf( "  R$ %d - R$ %d:  ", asterisco * 100, asterisco * 100 + 99  );
-        } // end else
-
-        for( int bar = 0; bar < frequencia[ asterisco  ]; bar++ )
-        {
-            printf( "*" );
-        }
-
-        if( asterisco >= 2 )
-            printf( "\n" ); // next line
-
-    } // end for
-
-    system("pause"); // pausa do programa
-
-    return 0; // programa terminado com sucesso
-
-} // fim main
+    return 0; // end programa
+} // end mair
