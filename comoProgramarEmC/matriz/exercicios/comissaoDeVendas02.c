@@ -16,7 +16,7 @@
 */
 
 #define SIZE 10
-
+#define FREQ_SIZE 11
 int main()
 {
     // constante
@@ -43,9 +43,11 @@ int main()
         
         // atribui valores aos vetores
         vendedor[i] = i + 1;
-        comissao[i] = vlVendido[i] * percent;
-        salario[i] = comissao[i] + fixo;
+        comissao[i] =  vlVendido[i] * percent;
+        salario[i] =  comissao[i] + fixo;
     } // end for 
+
+    system("cls");
 
     // relatório das comissões
     printf("\n\t\tRELATORIO DAS COmISSOES\n");
@@ -61,5 +63,7 @@ int main()
     // pula linha
     printf("\n");
 
+    system("pause"); // pausa do programa
+
     return 0; // end programa
-} // end mair
+} // end main
