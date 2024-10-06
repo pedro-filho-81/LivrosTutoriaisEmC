@@ -26,46 +26,21 @@ int main()
 
    srand(time(NULL));
 
-   do // faça
-   {
-      // gera número entre 1 e 50
-      alea = 1 + rand() % 50;
-      // informa que não existe número na matriz
-      vlIgual = 0;
-
-      // loop para verificar se existe valor na matriz
-      for ( i = 0; i < SIZE; i++)
-      {
-         for ( j = 0; j < SIZE; j++)
-         {
-            // verifica se na matriz tem valor igual
-            if (matriz[i][j] == alea) // se verdade
-            {
-               vlIgual = 1; // verdade
-               break;
-            } // end if igual
-                        
-         } // end for col         
-      } // end for row 
-
-      // se vlIgual igual a zero
-      if (vlIgual == 0)
-      {
-         // matriz recebe alea
-         matriz[i][j] = alea;
-         i++; // incrementa i
-         j++; // e incrementa j
-      } // end if
-
-      // enquanto i menor que size
-   } while (i < SIZE);
-
-   printf("\n");
-
-   // exibir valores
    for ( i = 0; i < SIZE; i++)
    {
       for ( j = 0; j < SIZE; j++)
+      {
+         alea = 1 + rand() % 50;
+         matriz[i][j] = alea;         
+      }      
+   }
+   
+   printf("\n");
+
+   // exibir valores
+   for (int i = 0; i < SIZE; i++)
+   {
+      for (int j = 0; j < SIZE; j++)
       {
          printf("%3d", matriz[i][j]);
       } // end for col
