@@ -67,7 +67,10 @@ int main()
 
    // EXIBE A mATRIZ
    printf("\nmatrizA:\n");
-   printf("                \n");
+   printf("Colunas:    ");
+   for ( i = 0; i < COLUmN; i++)
+      printf("%7d", i + 1);
+   printf("\n");
    // exibe matriz
    for ( i = 0; i < ROW; i++)
       // exibe a linha
@@ -84,7 +87,10 @@ int main()
    
    // EXIBE A mATRIZ
    printf("\nmatrizB:\n");
-   printf("                \n");
+   printf("Colunas:    ");
+   for ( i = 0; i < COLUmN; i++)
+      printf("%7d", i + 1);
+   printf("\n");
    // exibe matriz
    for ( i = 0; i < ROW; i++)
    {  printf("linha => %2ld:", i + 1);
