@@ -1,13 +1,18 @@
 /**
- * 
+ * 7) Leia uma matriz de tamanho 3 × 3. Em seguida, 
+ * imprima a soma dos valores contidos em sua diagonal 
+ * secundária.
+ * Backes, André. Linguagem C - Completa e 
+ * Descomplicada (Portuguese Edition) (p. 129). 
+ * GEN LTC. Edição do Kindle. 
  * Pedro, 08/10/2024
  */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-#define ROW 5
-#define COLUmN 5
+#define ROW 3
+#define COLUmN 3
 
 int main()
 {
@@ -63,8 +68,9 @@ int main()
    printf("\n");
    // exibe matriz
    for ( i = 0; i < ROW; i++)
+   {      
       // exibe a linha
-   {  printf("linha => %2d:", i);
+      printf("linha => %2d:", i);
       // for coluna
       for ( j = 0; j < COLUmN; j++)
       {
@@ -77,21 +83,15 @@ int main()
    // exibe o cabeçalho da diagonal principal
    printf("\nDiagonal principal: ");
    // exibe a diagonal principal
-   for ( i = 0; i < ROW; i++)
+   for ( j = 0; j < COLUmN; j++)
    {
-      for ( j = 0; j < COLUmN; j++)
-      {
-         // verifica se linha i coluna são iguais
-         if (i == j) // se verdade
-         {
-            // exibe os valores
-            printf("%5d", matrizA[i][j]);
+      // exibe os valores
+      printf("%5d", matrizA[j][j]);
 
-            // soma principal
-            somaPrici += matrizA[i][j];
-         } // end if         
-      } // end for j      
-   } // end for i  
+      // soma principal
+      somaPrici += matrizA[j][j];
+              
+   } // end for j      
 
 /*
     0 1 2
@@ -102,8 +102,7 @@ int main()
    // exibe o cabeçalho da diagonal secundária
    printf("\nDiagonal secundaria: ");
    // exibe a diagonal secundária
-
-   for ( j = 0; j < COLUmN; j++)
+   for(j = 0; j < COLUmN; j++)
    {
       // exibe os valores
       // i = 0 j  = 2
@@ -117,7 +116,7 @@ int main()
    } // end for j      
 
    // exibe resultado
-   printf("\nO maior valor eh %d na linha %d coluna %d", maior, maiorRow, maiorCol);
+   printf("\nO maior valor eh %d na linha %d coluna %d", maior, maiorRow, maiorCol );
    
    printf("\nO menor valor eh %d na linha %d coluna %d\n", menor, menorRow, menorCol);
 
@@ -127,4 +126,4 @@ int main()
    
    return 0;
 
-} // end main
+} // end m
