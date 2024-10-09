@@ -1,7 +1,8 @@
 /**
- * usando as funções isdigit, isalpha, 
- * isalnum, isxdigit
- * Pedro, 09/10/2024
+ * usando as funções isdigit, isalpha, isalnum, isxdigit
+ * Deitel, Paul; Deitel, Harvey. C Como Programar 
+ * (Portuguese Edition) (p. 260). Edição do Kindle. 
+ * 09/10/2024
  */
 #include <stdio.h>
 #include <stdlib.h>
