@@ -17,9 +17,9 @@ int main() { // início main
 	//Define para Português Brasil
 	setlocale(LC_ALL, "Portuguese");
   //variável
-  float x;
+  float x = 0;
 
-  printf("\nExibe o valor de x:")
+  printf("\nExibe o valor de x:");
   x = fabs(7.5);
   printf("x = fabs(7.5);\n%f\n", x);
 
