@@ -60,7 +60,7 @@ int main() { // início main
   } // fim for b
   printf("\n"); // pule uma linha
 
-  printf("C %c", ')'); // letra C
+  printf("C%c\n", ')'); // letra C
   // loop 10 vezes
   for(int i = 1; i <= 30; i++) {
 
@@ -74,7 +74,7 @@ int main() { // início main
       if(c == i){
 
         // imprima i e c
-        printf("i = %d, c = %d\n", i, c);
+        printf("i = %2d, c = %2d\n", i, c);
 
       } // fim if
     } // fim for
