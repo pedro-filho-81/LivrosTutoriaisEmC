@@ -20,7 +20,7 @@ int main()
     
     // loop for
     for(i = 0; i < SIZE; i++) {
-      // exibe �ndice, valor e espa�os
+      // exibe indice, valor e espacos
       printf("%7d%13d%7s", i, n[i], "       ");    
       
       // loop for histrograma
