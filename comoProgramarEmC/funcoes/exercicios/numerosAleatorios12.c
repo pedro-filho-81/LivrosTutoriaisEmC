@@ -1,8 +1,11 @@
-/* Exercício 5.13 Escreva instruções que atribuam
-inteiros aleatórios à variável n nos seguintes intervalos:
-Deitel, Paul; Deitel, Harvey. C  Como Programar
-(Página 153).  . Edição do Kindle.
-Pedro Filho, 16/05/2020*/
+/** 
+ * Exercício 5.13 Escreva instruções que atribuam
+ * inteiros aleatórios à variável n nos seguintes 
+ * intervalos:Deitel, Paul; Deitel, Harvey. 
+ * C  Como Programar (Página 153). 
+ * Edição do Kindle.
+ * Pedro Filho, 16/05/2020
+ * */
 
 //bibliotecas
 #include <stdio.h>
@@ -26,14 +29,14 @@ int main() { // início main
 
   srand( time(NULL) );
 
-  printf("A\) ");
+  printf("A%c", ')');
   // loop for repete 5 vezes
   for(int i = 1; i <= 10; i++) {
     a = 1 + rand() % 2; // número aleatório entre 1 e 2
     printf("%d ", a); // imprime o número
   } // fim for
 
-  printf("\nB\) ");
+  printf("\nB%c", ')');
   for(int a = 1; a <= 10; a++) {
     // b
     b = 1 + rand() % 100; // número aleatório entre 1 e 100
@@ -41,7 +44,7 @@ int main() { // início main
   } // fim for
   printf("\n");
 
-  printf("C\) ");
+  printf("C%c", ')');
   // loop for repete 5 vezes
   for(int i = 1; i <= 10; i++) {
     //C
@@ -49,7 +52,7 @@ int main() { // início main
     printf("%d ", c); // imprime o número
   } // fim for
 
-  printf("\nD\) ");
+  printf("\nD%c", ')');
   for(int a = 1; a <= 10; a++) {
     // D
     d = 1000 + rand() % 1112; // número aleatório entre 1 e 2
@@ -57,15 +60,15 @@ int main() { // início main
   } // fim for
   printf("\n");
 
-  printf("E\) ");
+  printf("E%c", ')');
   // loop for repete 5 vezes
   for(int i = 1; i <= 10; i++) {
     //E
-    e = -1 + rand() % 1; // número aleatório entre -1 e 1
+    e = -1 + rand() % 2; // número aleatório entre -1 e 1
     printf("%d ", e); // imprime o número
   } // fim for
 
-  printf("\nF\) ");
+  printf("\nF%c", ')');
   for(int a = 1; a <= 10; a++) {
     // F
     f = -3 + rand() % 11; // número aleatório entre -3 e 11
