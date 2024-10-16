@@ -1,5 +1,5 @@
 /**
- * /* Fig. 7.13: fig07_13.c
+ * Fig. 7.13: fig07_13.c
  * Tentando modificar um ponteiro constante 
  * para dados não constantes
  * Deitel, Paul; Deitel, Harvey. C Como Programar 
@@ -20,5 +20,5 @@ int main()
    ptr = &y; // proibido ptr não pode receber outro endereço
 
    return 0;
-   
+
 } // end main
