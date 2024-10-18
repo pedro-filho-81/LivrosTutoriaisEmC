@@ -27,7 +27,7 @@ int main()
    const float salario = 200.00; // salário semanal
    float vendasBrutas = 0; // para entrada das vendas brutas
    float percentualDasVendas = 0; // calcular os 9% sobre vendas brutas
-   float pagamento = 0; // para calcular o valor da semana
++   float pagamento = 0; // para calcular o valor da semana
 
    // entrada de dados
    printf( "Informe o valor das vendas brutas R$" );
@@ -37,7 +37,7 @@ int main()
    while( vendasBrutas != -1 )
    {
       // calcular o percentual sobre as vendas brutas
-      percentualDasVendas = vendasBrutas * 9 / 100;
+      percentualDasVendas = vendasBrutas * 0.09;
 
       // calcular o pagamento
       pagamento = salario + percentualDasVendas;
@@ -56,4 +56,4 @@ int main()
    // fim do programa
    return 0;
 
-}  // FIM FUNÇÃO MAIN
+} // FIM FUNÇÃO MAIN
