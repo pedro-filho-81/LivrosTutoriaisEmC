@@ -35,7 +35,7 @@ int main()
    while( contador <= 10 )
    {
       // entrada de dados
-      printf( "Digite um número: " ); // prompt
+      printf( "Digite o %2d numero inteiro: ", contador ); // prompt
       scanf( "%d", &num );
 
       // verificar se contador igual a 1 maior recebe num
@@ -59,7 +59,7 @@ int main()
    } // fim while
 
    // imprime
-   printf( "O maior valor é %d\n\n", maior );
+   printf( "O maior valor eh: %d\n\n", maior );
 
    // pausar
    system( "pause" );
