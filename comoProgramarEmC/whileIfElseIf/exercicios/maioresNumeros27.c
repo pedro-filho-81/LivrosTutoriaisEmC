@@ -21,6 +21,7 @@ int main()
    int num = 0;
    int primeiroMaior = 0;
    int segundoMaior = 0;
+   int terceiroMaior = 0;
    int contador = 1;
 
    // cabeçalho
@@ -47,25 +48,30 @@ int main()
 
       // se num maior que primeiro maior
       if( num > primeiroMaior ) {
+
          // segundo recebe primeiro;
          segundoMaior = primeiroMaior;
          // primeiro maior recebe num
          primeiroMaior = num;
       }  // fim if externo
-   
+
       // se o primeiro igual ao segundo e
       if( primeiroMaior == segundoMaior )
+      {
          // se num menor que o primeiro
          if( num < primeiroMaior )
             // segundo recebe número
             segundoMaior = num;
- 
+      }
+      
       // se num menor que o primeiro e
       if( num < primeiroMaior )
+      {
          // num maior que o segundo
          if( num > segundoMaior )
             // segundo recebe num
             segundoMaior = num;
+      }
       
       // incremanta contador
       contador++;
@@ -73,7 +79,7 @@ int main()
    }  // fim while
 
    // imprime resultado
-   printf( "O maior valor eh: %d\no segundo maior eh: %d\n\n", primeiroMaior, segundoMaior);
+   printf( "O maior valor eh: %d\no segundo maior eh: %d\nterceiro Maior eh: %d\n\n", primeiroMaior, segundoMaior, terceiroMaior);
 
    // pausar
    system( "pause" );
