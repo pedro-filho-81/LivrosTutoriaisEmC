@@ -18,24 +18,19 @@ int main()
    // configura para português Brasil
    setlocale( LC_ALL, "Portuguese" );
 
-   // cria variável
-   int multiplos = 2;
-   int contador = 1;
+   // cria variável 
+   int multiplos = 1;
+   long contador = 1; 
 
-   // imprima 21
-   printf( "2 " );
+   // imprima 21 
+   // printf( "2 " );
 
-   // LOOP INFINITO DOS MULTIPLOS DE 2
-   while( 1 ) {
-
-      // calcúlo dos multiplos conforme exemplo.
-      multiplos *= 2;
-
-      // imprima os multiplos
-      printf( "%d ", multiplos );
-      
+   // LOOP INFINITO DOS  MULTIPLOS DE 2
+   while( multiplos <= 40 ) {
+      contador *= 2;
+      printf("contador eh: %ld\n", contador);
       multiplos++;
-   
+
    } // fin while
 
    // pausar
