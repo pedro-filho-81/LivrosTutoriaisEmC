@@ -1,6 +1,13 @@
 {
    "configurations": [
       {
+         "type": "java",
+         "name": "HellowWorld01",
+         "request": "launch",
+         "mainClass": "HellowWorld01",
+         "projectName": "LinguagemC_17f61370"
+      },
+      {
          "name": "C/C++: gcc.exe build and debug active file",
          "type": "cppdbg",
          "request": "launch",
