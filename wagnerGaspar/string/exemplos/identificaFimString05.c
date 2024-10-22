@@ -46,7 +46,7 @@ int main()
    // executa enquanto não encontrar o caractere '\0' fim da string
    while (palavras[i] != '\0')
    {
-      // exibe o texto digitado até encontrar o caractere '\0'
+      // exibe o texto digitado até encontrar o caractere '\0' fim da string
       printf("%d = %c\n", i, palavras[i]);
       i++; // incrementa i em 1
 
