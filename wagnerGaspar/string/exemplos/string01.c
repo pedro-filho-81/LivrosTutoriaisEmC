@@ -7,7 +7,7 @@
  * cria um vetor para 100 caracteres
  * char vetor[100] = {"Tudo entre aspas duplas é uma string."};
  */
-
+#include <stdio.h>
 int main()
 {   // 1º) cria um vetor para armazenar uma 
    // sequência de caracteres
