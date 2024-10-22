@@ -35,7 +35,8 @@ int main()
     * pelo vetor palavras (deve ser o tamanho do vetor)
     * 
     * [^\n] esses caracteres entre colchetes altera o
-    * padrão do scanf() para ler os dados digitados
+    * padrão do scanf() para ler todos os dados digitados
+    * inclusive espaços encerra após digitar (enter)
     * */
    scanf("%100[^\n]", palavras);
    
