@@ -1,28 +1,17 @@
 /**
- * aula 134:
+ * aula 136:
  * Comparando duas strings com a função strcmp(str1, str2)
  **/
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <string.h> 
 int main()
 {
-   // cria 2 strings
-   char str1[] = {"\nBom "};
-   char str2[] = {"dia\n"};
+   // vetores de caracteres
+   char palavra1[50] = {"Oi."};
+   char palavra2[50] = {"Bom dia."};
 
-   printf("Concatenacao com strcat()\n");
-   printf("Cria duas Strings:");
-   printf("\nchar str1[] = {\"\\nBom \"};");
-   printf("\nchar str2[] = {\"\\ndia\\n\"};");
-
-   // juntando duas strings
-   // str2 é colocado no final da string str1
-   // str2 é concatenado no final da string str1
-   strcmp(str1, str2);
-   printf("\nchama a funcao:\nstrcat(str1, str2);");
-   // exibe resultado
-   printf("\nExibindo str1 apos a funcao strcat(): %s\n", str1);
+   printf("\n\nResultado: %d\n\n", strcmp(palavra1, palavra2));
 
    return 0;
 } // end main
