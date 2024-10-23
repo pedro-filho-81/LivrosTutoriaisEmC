@@ -26,7 +26,22 @@ int main()
    // aguarda a entrada do usuário
    fgets(palavras, 100, stdin);
 
+   // retirando a tecla entre da contagem dos caracteres
+   i = 0; // inicia a contagem 
+   // enquanto palavras diferente de fim de string
+   while (palavras[i] != '\0') // faça
+   {
+      // se palavras igual a enter \n
+      if (palavras[i] == '\n') // se verdade
+      {
+         // palavras recebe o caractere fim da string
+         palavras[i] = '\0'; 
+      } // end if
+      i++; // incrementa i      
+   } // end while
+   
+   // exibe o resultado
+   printf("O texto digitado tem %d caracteres.", strlen(palavras));
 
-
-   return 0;
+   return 0; // programa ok
 } // end main
