@@ -1,8 +1,9 @@
 /**
  * aula 133: 
- * Concatenando duas Strings com a função stdcat(str1, str2)
+ * Concatenando duas Strings usando a função stdcat(str1, str2)
  * Concatenar = juntar, unir. 
  * a função strcat(str1, str2)
+ * junta a segunda string na primeira
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,6 +26,6 @@ int main()
    printf("\nchama a funcao:\nstrcat(str1, str2);");
    // exibe resultado
    printf("\nExibindo str1 apos a funcao strcat(): %s\n", str1);
-
+   
    return 0;
 } // end main
