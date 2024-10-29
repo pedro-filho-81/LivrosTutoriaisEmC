@@ -31,13 +31,28 @@ int main()
 
    // calcular a discriminante
    delta = pow(b, 2) - 4 * a * c;
+   
    printf("\nDelta = %.2f\n", delta);
 
-   raiz1 = -b + sqrt(delta) / (2 * a);
-   printf("Raiz1 = %.2f\n", raiz1);
+   if (delta > 0)
+   {
+      raiz1 = -b + sqrt(delta) / (2 * a);
+      printf("Raiz1 = %.2f\n", raiz1);
 
-   raiz2 = -b - sqrt(delta) / (2 * a);
-   printf("Raiz2 = %.2f\n", raiz2);
+      raiz2 = -b - sqrt(delta) / (2 * a);
+      printf("Raiz2 = %.2f\n", raiz2);
+   } // end if
+   else if (delta == 0)
+   {
+      raiz1 = -b + sqrt(delta) / (2 * a);
+      printf("Raiz1 = %.2f\n", raiz1);
+
+      raiz2 = -b - sqrt(delta) / (2 * a);
+      printf("Raiz2 = %.2f\n", raiz2);
+   } else {
+      printf("\nEquacao nao possui raiz real.\n");
+   } // end else
    
    return 0;
+   
 } // end main
