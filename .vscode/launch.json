@@ -2,6 +2,13 @@
    "configurations": [
       {
          "type": "java",
+         "name": "TorresH",
+         "request": "launch",
+         "mainClass": "TorresH",
+         "projectName": "LinguagemC_17f61370"
+      },
+      {
+         "type": "java",
          "name": "HellowWorld01",
          "request": "launch",
          "mainClass": "HellowWorld01",
