@@ -10,7 +10,7 @@ void hanoi(int disco, char inicio, char meio, char fim)
       hanoi(disco - 1, inicio, fim, meio);
       
       // exibe o movimento do disco
-      printf("O disco %d moveu-se da torre %c para torre %c\n", disco, inicio, fim);
+      printf("Move o disco %d da torre %c para torre %c\n", disco, inicio, fim);
       
       // move novamente o disco
       hanoi(disco - 1, meio, inicio, fim);
