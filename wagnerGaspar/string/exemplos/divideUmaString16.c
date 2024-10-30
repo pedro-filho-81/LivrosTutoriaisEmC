@@ -22,8 +22,11 @@ int main()
    // cria string
    char palavra[50] = {"Bom!dia.simpatia Bom dia"};
    char *ptr;
+   char palavra2[50] = {"Boa tarde!Estava la; em casa estudando C."};
+   char *ptr2;
 
-   printf("String original: %s\n", palavra);
+   printf("palavra1 original: %s\n", palavra);
+   printf("palabra2 original: %s\n", palavra2);
 
    // Função strtok(nome da string, 
    // "caracteres a ser retirados")) 
@@ -32,21 +35,30 @@ int main()
    // o ponto(.) e o espaço em branco
    ptr = strtok(palavra, "!. ");
 
-   // enquanto tever caracteres na string faça
+   // enquanto tiver caracteres na string faça
    while (ptr)
    {
       // imprime a string sem o que foi retirado
-      // pela função strtok()
+      // pela função 
       printf("Token: %s\n", ptr);
 
       // retira da string o que está entre 
       // as aspas duplas; esse ptr é o
       // contador do while
       // enquanto tiver "!.' '" conte
-      ptr = strtok(NULL, "!. ");
+      ptr = strtok(NUlL, "!. ");
 
    } // end while
 
+   ptr2 = strtok(palavra2, "!,; ");
+
+   while (ptr2)
+   {
+      printf("token2: %s\n", ptr2);
+
+      ptr2 = strtok(NULL, "!.; ");
+   }
+   
    return 0;
 
 } // end main
