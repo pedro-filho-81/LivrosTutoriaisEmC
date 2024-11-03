@@ -20,15 +20,14 @@ int main()
    scanf(" %30[^\n]", palavra);
 
    side = strlen(palavra); // side recebe o tamanho da palavra
-   
-   //  enquanto tamanho maior ou igual ao contador faça
+
+   //  enquanto tamanho maior que o contador faça
    for( i = 0; i < strlen(palavra); i++)
    {
       // copia recebe a palavra invertida
-      copia[i] = palavra[side -1];
+      copia[i] = palavra[side - 1];
       // decrementa o tamanho
       side--;
-
    } // end for
    // cópia recebe o final da string
    copia[i] = '\0'; 
