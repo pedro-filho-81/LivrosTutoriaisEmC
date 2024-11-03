@@ -26,7 +26,7 @@ int main()
    {
       // verifica se a letra inicial 
       // é diferente da letra no final da palavra
-      if (palavra[i] != palavra[side])
+      if (palavra[i] != palavra[side]) // se verdade
       {
          diferente++; // incrementa em 1
       } // end if
