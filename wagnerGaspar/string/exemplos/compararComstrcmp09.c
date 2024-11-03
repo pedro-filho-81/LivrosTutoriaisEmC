@@ -14,27 +14,32 @@ int main()
    char palavra1[50] = {"maria."};
    char palavra2[50] = {"maria."};
 
-   printf("\nComparacao de strings com:\nstrcmp(str1, str2).");
+   printf("\nA funcao STRCMP(STR1, STR2)\ncompara as strings e retorna"
+         "\nZero (0) se as strings sao iguais."
+         "\nMenos Um (-1) se as strings estao em ordem crescente."
+         "\nUm (1) se as strings estao em ordem decrescente.\n\n");
+
+   printf("Strings iguais:");
    printf("\npalavra1[50] = {\"maria.\"};\npalavra2[50] = {\"maria.\"};");
    printf("\nstrcmp(palavra1, palavra2)");
-   printf("\nResultado: %d para strings iguais.\n\n", 
+   printf("\nRetorna: %d quando as strings iguais.\n", 
             strcmp(palavra1, palavra2));
 
    // vetores de caracteres
    char palavra3[50] = {"Amanda"};
    char palavra4[50] = {"Cleonice"};
 
-   printf("\nComparacao de strings com:\nstrcmp(str1, str2).");
+   printf("\nStrings em ordem cresente:");
    printf("\npalavra3[50] = {\"Amanda.\"};\npalavra4[50] = {\"Cleonice.\"};");
    printf("\nstrcmp(palavra3, palavra4)");
-   printf("\nResultado: %d para strings em ordem crescente.\n\n", 
+   printf("\nRetorna: %d quando as strings estao em ordem crescente.\n", 
             strcmp(palavra3, palavra4));
 
    // vetores de caracteres
    char palavra5[50] = {"Cleonice"};
    char palavra6[50] = {"Amanda"};
 
-   printf("\nComparacao de strings com:\nstrcmp(str1, str2).");
+   printf("\nStrings em ordem decrescentes:");
    printf("\npalavra5[50] = {\"Cleonice.\"};\npalavra6[50] = {\"Amanda.\"};");
    printf("\nstrcmp(palavra5, palavra6)");
    printf("\nResultado: %d para strings em ordem Decrescente.\n\n", 
