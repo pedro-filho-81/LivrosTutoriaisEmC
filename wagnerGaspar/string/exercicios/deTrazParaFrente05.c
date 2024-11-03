@@ -7,6 +7,7 @@
  * Edição do Kindle. 
  * 31/10/2024
  */
+
 #include <stdio.h>
 #include <string.h>
 #define SIZE 50
@@ -14,11 +15,14 @@
 int main()
 {   
    // cria uma variável para string
-   char palavra[SIZE];
-   char copia[SIZE];
-   int i = 0, j = 0;
+   char palavra[SIZE]; // original
+   char copia[SIZE]; // invertida
+   int i = 0; // para for
+   int tam = 0; // início for inverte
+   int j = 0; // índice da cópia
 
    printf("\nEXIBE STRING DE TRAZ PARA FRENTE\n");
+   
    // entrada de dados
    printf("Digite uma string: ");
    scanf("%50[^\n]", palavra); // entrada do usuário
@@ -26,18 +30,22 @@ int main()
    // exibe a string
    printf("String digitada: %s\n", palavra);
 
-   printf("copia: ");
+   // tamanho recebe o tamanho da string palavra
+   tam = strlen(palavra); // tamanho da string digitada
 
    // loop para inverter a string
-   for ( i = strlen(palavra); i >= 0; i--)
+   for ( i = tam - 1; i >= 0; i--)
    {
-      // copia[i] = palavra[i];      
-      // printf("%c", palavra[i]);
-      copia[i] = palavra[i];
-      j++;
-   }
-   
-   printf("\ncopia: %s\n", copia);
+      // cópia recebe a palavra invertida
+      copia[j] = palavra[i];
+      j++; // incrementa j
+   } // end for
 
-   return 0;
+   copia[j] = '\0'; // cópia recebe fim da string
+
+   // exibe a cópia
+   printf("\ni = %d\nj = %d\ncopia: %s\n", i, j, copia);
+
+   return 0; // programa ok
+
 } // end main
