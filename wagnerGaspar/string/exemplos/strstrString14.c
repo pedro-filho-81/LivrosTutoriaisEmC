@@ -1,8 +1,7 @@
 /**
  * A função strstr() retorna um ponteiro para a posição 
  * da primeira ocorrência de uma string em outra string.
- * A função strstr() é definida no <string.h>arquivo de 
- * cabeçalho.
+ * A função strstr() é definida no arquivo <string.h>.
  */
 #include <stdio.h>
 #include <string.h>
