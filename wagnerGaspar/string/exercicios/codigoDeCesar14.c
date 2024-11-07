@@ -21,6 +21,37 @@
 #include <string.h>
 
 int main()
-{
+{  
+   // STRING
+   char palavra[100];
+
+   // variáveis
+   int i = 0;
+
+   printf("\nCODIGO DE CESAR\n");
+
+   // entrada de dados
+   printf("Digite uma palavra: ");
+   scanf(" %100[^\n]", palavra);
+
+   printf("\nPalavra codificada: ");
+
+   // enquanto a string diferente 
+   // do fim da string faça
+   while (palavra[i] != '\0')
+   {
+      // exibe os caracteres da strint
+      // três caracteres a frente
+      printf("%c", palavra[i] + 3);
+      // incrementa o índice da string
+      i++;
+   } // end while
+
+   // adiciona o fim da string
+   palavra[i] = '\0';
+
+   printf("\n\n");
+   
+   return 0; // programa ok
 
 } // end main
