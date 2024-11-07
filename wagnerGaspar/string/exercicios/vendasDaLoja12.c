@@ -16,12 +16,13 @@
 int main()
 {
    // strings
-   char nomeProd[3][50]; // matriz de string
+   char nomeProd[5][50]; // matriz de string
    char cadastrar = 's';
 
    int quantidade[20];
    int i = 0; // para loops
-   
+   int contarCompras = 1;
+
    float vlProduto[20];
    float vlPagamento[20];
    float vlTotal;
@@ -39,12 +40,16 @@ int main()
       scanf("%d", &quantidade[i]);
       printf("Valor do produto: R$ ");
       scanf("%f", &vlProduto[i]);
-
+      
       // calcular
       vlPagamento[i] = vlProduto[i] * quantidade[i];
 
+      // valor total recebe os valores do pagamento
       vlTotal += vlPagamento[i];
-      
+
+      i++; // incrementa os índices
+
+      // pergunta se quer continuar
       printf("Deseja fazer novo cadastro? (s/n): ");
       scanf(" %c", &cadastrar);
       
@@ -53,27 +58,28 @@ int main()
       {
          break; // sair do cadastro
       } // end if
-      
-      i++; // incrementa os índices
-
+      else {
+         contarCompras++;
+      }
    } // end for entrada
-
+ 
    // loop para exibir as compras
-   for ( i = 0; i < 3; i++)
+   for ( i = 0; i < contarCompras; i++)
    {
       // exibir resultado
       printf("\nProduto: %s\nQuantudade: %d\nVlProduto: R$ %.2f\n",nomeProd[i], quantidade[i], vlProduto[i]);
 
       printf("Valor a pagar R$ %.2f\n", vlPagamento[i]);
+         
+      // calcular descontos
+      vlDescontos = vlTotal * 0.10;
 
    } // end for
-   
-   // calcular descontos
-   vlDescontos = vlTotal * 0.10;
 
-   printf("\nPAGAmENTO\n");
+   printf("\nPAGAmENTO");
 
    // exibe valor total
+   printf("\nVoce fez %d compras", contarCompras);
    printf("\nTotal a pagar R$ %.2f\n", vlTotal);
    printf("Avista tem R$ %.2f de descontos.\n", vlDescontos);
    printf("Total avista R$ %.2f\n\n", vlTotal - vlDescontos);
