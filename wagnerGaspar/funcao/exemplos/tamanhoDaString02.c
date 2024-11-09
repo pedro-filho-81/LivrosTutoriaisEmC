@@ -39,11 +39,13 @@ int main()
 
    // exibe o tamanho da string com a função strlen
    // da biblioteca string.h
+   printf("\nFUNCAO DA BIBLIOTECA STRING.H\n");
    printf("strlen: %d\n", strlen(vet));
    
    // exibe o tamanho da string com a função 
    // minhaStrlen() criada pelo programador
-   printf("minhaStrlen: %d\n\n", minhaStrlen(vet));
+   printf("\nFUNCAO CRIADA PELO PROGRAADOR.\n");
+   printf("RETORNA O TAANHO DA STRING\nminhaStrlen: %d\n\n", minhaStrlen(vet));
 
    return 0; // final do prog
 
