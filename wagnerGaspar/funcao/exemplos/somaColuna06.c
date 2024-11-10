@@ -1,7 +1,8 @@
 /**
- * 
+ * Calcula e soma as colunas de uma matriz
  * 09/10/2024
  */
+
 #include <stdio.h>
 #include <stdlib.h> // para srand e rand
 #include <time.h> // para srand()
@@ -23,6 +24,16 @@ void imprimir()
    // variável 
    int i, j;
 
+   printf("Colunas:  ");
+
+   // exibe cabeçalho da coluna
+   for ( i = 0; i < tam; i++)
+   {
+      printf("%3d", i);
+   } // end for cabeçalho
+   printf("\n");
+
+   
    // loop para linhas da matriz
    for ( i = 0; i < tam; i++)
    {
@@ -36,7 +47,7 @@ void imprimir()
          printf("%2d ", matriz[i][j]);
       } // end for j
       printf("\n"); // pula linha
-   } // end for i
+    } // end for i
    printf("\n");
 } // end imprimir
 
