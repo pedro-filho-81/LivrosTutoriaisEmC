@@ -8,23 +8,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// trocar valor
+// trocar valor valores do vetor
 void trocar(int vetor[], int inicio, int fim)
 {
    // variável
-   int temp;
+   int temp; // recebe valores do vetor
 
+   // se início menor que o fim
    if (inicio < fim)
    {
+      // temp recebe o valor do vetor do índice inicio
       temp = vetor[inicio];
+      // vetor com índice inicio recebe 
+      // o valor do vetor do índice fim
       vetor[inicio] = vetor[fim];
+      // vetor do índice fim recebe o valor temp
       vetor[fim] = temp;
+
+      // função troca recebe o vetor 
+      // ínicio é somado 1
+      // fim e subtraido 1
+      // ou seja, ínicio almenta o valor
+      // fim diminui o valor
       trocar(vetor, inicio + 1, fim - 1);
-   } 
+   } // end if
    
 } // end trocar
 
-// função trocaelementoVetor
+// função imprimir
 void imprimir(int vetor[], int tam)
 {
    // verificar se todo vetor foi percorrido
