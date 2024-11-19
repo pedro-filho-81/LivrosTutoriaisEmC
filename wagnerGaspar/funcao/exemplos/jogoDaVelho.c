@@ -18,15 +18,35 @@ int linha, coluna;
 void inicializaMatriz();
 void imprimir(); // exibe o tabuleiro
 int ganhouPorLinha(int l, char c);
-int ganhorPorLinhas(char c);
+int ganhouPorLinhas(char c);
+int ganhouPorColuna(int c, char j);
+int ganhouPorColunas(char j);
+int ganhouPorDiagPrin(char c);
+int ganhouPorDiagSec(char c);
+int ehValida(int l, int c);
+void lerCoordenadas(char j);
+int quantVazias();
+void jogar();
+
 
 int main()
 {
-   // chama a função do tabuleiro
-   imprimir();
+   // variável
+   int opcao;
+
+   do {
+      inicializaMatriz();
+      jogar();
+
+      printf("Digite 1 para jogar novamente: ");
+      scanf("%d", &opcao);
+
+   } while(opcao == 1);
 
    printf("\n\n");
+
    return 0;
+
 } // end main
 
 // FUNÇÕES E PROCEDImENTOS
@@ -66,7 +86,7 @@ void imprimir()
          // se não for a última posição da linha
          if (coluna < 2)
             // exiba uma barra da divisão da coluna
-            printf(" | ");
+            printf("|");
 
          // se for a última coluna
          if (coluna == 2)
@@ -110,7 +130,7 @@ int ganhouPorLinha(int l, char c)
 int ganhouPorLinhas(char c)
 {
    // variável
-   int ganhou;
+   int ganhou = 0;
 
    // loop for para verificar se ganhou nas linhas
    for (linha = 0; linha < 3; linha++)
@@ -134,16 +154,169 @@ int ganhouPorColuna(int c, char j)
 {
    // verifica se todos os caracteres da coluna foreM
    // do jogador j
-   if(jogo[0][c] == j && jogo[1][c] == j && jogo[2][c])
+   if(jogo[0][c] == j && jogo[1][c] == j && jogo[2][c] == j)
       return 1; // retorne 1, j venceu
    else // se não
       return 0; // retorne 0, j não venceu ainda
 } // end ganhou por coluna
 
 /**
- * Função que verifica a vitória por coluna do jugador j
- * por colunas
+ * Função que verifica a vitória por colunas do jugador j
  *       1 - ganhou
  *       2 - não ganhou ainda
  */
-int ganhouPorColunas()
+int ganhouPorColunas(char j)
+{
+   // variável
+   int ganhou = 0;
+
+   // loop para somar os pontos ganhos do jogador j nas colunas
+   for ( coluna = 0; coluna < 3; coluna++)
+   {
+      // ganhou recebe o retorno da função
+      ganhou += ganhouPorColuna(coluna, j);
+   } // end for
+
+   return ganhou; // e retorna o valor da variável
+
+} // end ganhou por colunas
+
+/**
+ * função para verificar a virória do jogador c 
+ * na diagonal principal
+ *       1 - gsnhou
+ *       0 - não ganhou ainda
+ */
+int ganhouPorDiagPrin(char c)
+{
+   // verifica se jogador c ganhou na diagonal principal
+   if(jogo[0][0] == c && jogo[1][1] == c && jogo[2][2] == c) // se verdade
+      // retorne o valor 1
+       return 1;
+   else // se não
+      // retorne o valor zero 0
+      return 0;
+} // end ganhou diagonal principal
+
+/**
+ * função para verificar a vitória do jogador c na
+ * diagonal secundária
+ *       1 - ganhou
+ *       0 - não ganhou ainda
+ */
+int ganhouPorDiagSec(char c)
+{
+   // verifica se jogador c ganhou na diagonal seundária
+   if(jogo[0][3] == c && jogo[1][1] == c && jogo[2][0] == c) // se verdade
+      // retorne 1
+      return 1;
+   else // se não
+      // retorne 0
+      return 0;
+} // end ganhou na diagonal secundária
+
+/**
+ * Função que diz se a coordenada é válida ou não
+ *    1 - válida
+ *    0 - não é valida
+ */
+int ehValida(int l, int c)
+{
+   // se linha e coluna maior ou igual a zero, menor que três e jogo igual a espaço em branco
+   if(l >= 0 && l < 3 && c >= 0 && c < 3 && jogo[l][c] == ' ') // se verdade
+      // retorne 1
+      return 1;
+   else // se não
+      // retorne zero
+      return 0; 
+} // end ehValida
+
+/**
+ * Procedimento para ler coordenadas 
+ * digitadas pelo jogador  
+ */
+void lerCoordenadas(char j)
+{
+   // variáveis
+   int linha, coluna;
+
+   // entrada de dados
+   printf("Digite linha e coluna: ");
+   scanf("%d%d", &linha, &coluna);
+
+   // enquanto a função ehValida igual a zero faça
+   while (ehValida(linha, coluna) == 0)
+   {
+      // Entre com novos dados
+      printf("Coordenadas inválidas! Digite outra linha e coluna: ");
+      scanf("%d%d", &linha, &coluna);
+   } // end while
+
+   jogo[linha][coluna] = j;
+   
+} // end ler coordenadas
+
+/**
+ * Função para verificar a quantidade de 
+ * casas vaziar no tabuleiro (não jogadas)
+ */
+// função quantidade vazias
+int quantVazias()
+{
+   // variável
+   int quantidade = 0;
+
+   // loop para verificar se na matriz tem casas vazias
+   for ( linha = 0; linha < 3; linha++) {
+      for(coluna = 0; coluna < 3; coluna++)
+         // se na matriz jogo tiver espaços vazios
+         if(jogo[linha][coluna] == ' ')
+            // incrementa a quantidade em 1
+            quantidade++;
+   } // end for linha
+   // retorne a quantidade
+   return quantidade;
+} // end quantidade vaziao
+
+/**
+ * Procedimento jogar com o loop (repetição)
+ * principal do jogo
+ */
+void jogar()
+{
+   int jogador = 1, vitoriaX = 0, vitoria0 = 0;
+   char jogador1 = 'X', jogador2 = '0';
+
+   do {
+      imprimir();
+
+      if(jogador == 1) {
+         lerCoordenadas(jogador1);
+         jogador++;
+         vitoriaX += ganhouPorLinhas(jogador1);
+         vitoriaX += ganhouPorColunas(jogador1);
+         vitoriaX += ganhouPorDiagPrin(jogador1);
+         vitoriaX += ganhouPorDiagSec(jogador1);
+      } // end if jogador1
+      else 
+      {
+         lerCoordenadas(jogador2);
+         jogador = 1;
+         vitoria0 += ganhouPorLinhas(jogador2);
+         vitoria0 += ganhouPorColunas(jogador2);
+         vitoria0 += ganhouPorDiagPrin(jogador2);
+         vitoria0 += ganhouPorDiagSec(jogador2);
+      } // end else
+
+   } while(vitoriaX == 0 && vitoria0 == 0 && quantVazias() > 0);
+
+   imprimir();
+
+   if(vitoria0 == 1)
+      printf("\nParabens Jogador2. Voce venceu!!!\n");
+   else if(vitoriaX == 1)
+      printf("\nParabens Jogador1. Voce venceu!!!\n");
+   else
+      printf("\nQue pena. Perderam!!!\n");
+
+} // end jogar
