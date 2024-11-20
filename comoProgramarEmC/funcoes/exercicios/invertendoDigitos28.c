@@ -105,4 +105,4 @@ void inverteNumero( int numero )
             // imprima
             printf( "Erro! número inválido!" );
 
-} // fim função inverte número
+} // fim função inverte número 
