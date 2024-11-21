@@ -10,31 +10,41 @@ int main()
 {
    // matrizes de inteiros 3 por 3 com 9 elementos
    int matriz1[3][3] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+   
+   // cria e inicializa uma matriz 3 por 4 de caracteres
+   char alfabeto[5][6] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+   
+   // variáveis
+   int i, j;
 
    // exibe os valores adicionados
-   printf("\nMatriz = {");
-   // loop para exibir o vetor[]
-   for ( i = 0; i < count; i++)
-   {
-      // exibir
-      printf("%d ", vetor[i]);
-   } // end for
-   printf(" };");
+   printf("\nMatriz = \n{");
+   // loop para linha da matriz
+   for ( i = 0; i < 3; i++)
+   {  // loop para coluna da matriz
+      for ( j = 0; j < 3; j++)
+      {
+         // exibe os elementos da matriz
+         printf("%d ", matriz1[i][j]);
+      } // end for colunas
+      printf("\n");
+   } // end for linhas
+   printf(" };\n");
    
-   // cria matriz 3 por 3 com 7 elementos
-   int matriz2[][3] = {1, 2, 3, 4, 5, 6, 7};
-
-   // cria matriz 3 por 3 preenchida com zeros
-   int matriz3[3][3] = {0};
-
-   // cria uma matriz com números reais com
-   // 5 linhas e 5 colunas
-   float matriz4[5][5];
-
-   // cria matriz de caracteres com 10 linhas 
-   // e 15 colunas
-   char matriz5[10][15];
-
+   // exibe os valores adicionados
+   printf("\nMatriz = \n{");
+   // loop para linha da matriz
+   for ( i = 0; i < 5; i++)
+   {  // loop para coluna da matriz
+      for ( j = 0; j < 6; j++)
+      {
+         // exibe os elementos da matriz
+         printf("%c ", alfabeto[i][j]);
+      } // end for colunas
+      printf("\n");
+   } // end for linhas
+   printf(" };\n");
+   
    printf("\n\n");
    return 0;
 } // end main
