@@ -20,7 +20,7 @@ int main()
    /**
     * Cria um vetor do tipo inteiro, de nome num3.
     * de tamanho 5, com 3 elementos. Nesses casos,
-    * às outras posições é preenchidas com zeros.
+    * às outras posições são preenchidas com zeros.
     */
    printf("\nnum3[] = ");
    // cria vetor
@@ -34,7 +34,7 @@ int main()
    /**
     * Cria um vetor do tipo inteiro, de nome num4.
     * de tamanho 5, com 7 elementos. Nesses casos,
-    * às outras posições não serão perdidas.
+    * às outras posições não serão perenchidas.
     */
    printf("\nnum4[5] = ");
    // cria vetor
