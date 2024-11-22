@@ -9,6 +9,23 @@
 #define LINHA 3
 #define COLUNA 4
 
+// função display
+void display(int matriz[][COLUNA])
+{
+   int i, j;
+   
+   // loop para linha da matriz
+   for ( i = 0; i < LINHA; i++)
+   {  // loop para coluna da matriz
+      for ( j = 0; j < COLUNA; j++)
+      {
+         // exibe os elementos da matriz
+         printf("%4d", matriz[i][j]);
+      } // end for colunas
+      printf("\n");
+   } // end for linhas
+} // end display
+
 int main()
 {  
    // matrizes
@@ -46,44 +63,15 @@ int main()
       } // end for coluna      
    } // end for linha   
 
-   // exibe os valores adicionados
-   printf("\nMatrizA:\n");
-   // loop para linha da matriz
-   for ( i = 0; i < LINHA; i++)
-   {  // loop para coluna da matriz
-      for ( j = 0; j < COLUNA; j++)
-      {
-         // exibe os elementos da matriz
-         printf("%4d", matA[i][j]);
-      } // end for colunas
-      printf("\n");
-   } // end for linhas
-   
-   // exibe os valores adicionados
-   printf("\nMatrizB:\n");
-   // loop para linha da matriz
-   for ( i = 0; i < LINHA; i++)
-   {  // loop para coluna da matriz
-      for ( j = 0; j < COLUNA; j++)
-      {
-         // exibe os elementos da matriz
-         printf("%4d", matB[i][j]);
-      } // end for colunas
-      printf("\n");
-   } // end for linhas
-   
-   // exibe os valores adicionados
-   printf("\nMatrizC:\n");
-   // loop para linha da matriz
-   for ( i = 0; i < LINHA; i++)
-   {  // loop para coluna da matriz
-      for ( j = 0; j < COLUNA; j++)
-      {
-         // exibe os elementos da matriz
-         printf("%4d", matC[i][j]);
-      } // end for colunas
-      printf("\n");
-   } // end for linhas
+   // chama função
+   printf("matrizA:\n");
+   display(matA);
+
+   printf("matrizB:\n");
+   display(matB);
+
+   printf("matrizC:\n");
+   display(matC);
    
    printf("\n\n");
    return 0;
