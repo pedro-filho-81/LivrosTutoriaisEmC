@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SIDE 5
+#define SIDE 20
 
 // função para adicionar valores aleatórios
 void add(int vetor[])
@@ -22,30 +22,30 @@ void add(int vetor[])
    } // end for
 } // end add
 
-// função para trcar valores do vetor
-void trocarValores(int vetor[])
+// função para trocar valores do vetor
+void trocarValores(int vetorA[], int vetorB[])
 {
    // variáveis
-   int temp = 0, fim = 4;
+   int temp = 0, fim = SIDE - 1;
 
    // loop para trocar os valores 
    for (int i = 0; i < SIDE; i++)
    {
-      temp = vetor[i];
-      vetor[i] = vetor[fim];
-      vetor[fim] = temp;
-      fim--;
+      temp = vetorA[i]; // variável temp recebe valor do vetorA
+      vetorA[i] = vetorB[fim]; // vetorA recebe o último valor do vetorB
+      vetorB[fim] = temp; // vetorB recebe o valor da variável temp
+      fim--; // contador fim é decrementado em 1
    } // end for   
 } // end trocarValores
 
-// função display
+// função display ( exibir )
 void display(int vetor[])
 {
    // loop para linha da matriz
    for (int i = 0; i < SIDE; i++)
    {  
       // exibe os elementos da matriz
-      printf("%3d", vetor[i]);
+      printf("%4d", vetor[i]);
    } // end for colunas
 } // end display
 
@@ -58,22 +58,19 @@ int main()
    // gera sementa para rand
    srand(time(NULL));
 
-   // chama a função add
+   // chama a função add ( adicionar )
    add(vetorA);
+
+   printf("\nINVERTE VALORES");
 
    // chama função
    printf("\nVetorA:\n");
    display(vetorA);
 
-   trocarValores(vetorB);
+   trocarValores(vetorA,vetorB);
    printf("\nVetor trocado:\n");
    display(vetorB);
 
-/*
-   trocarValores(vetorA);
-   printf("\nVetor invertido:\n");
-   display(vetorA);
-*/ 
    printf("\n\n");
    return 0;
 } // end main
