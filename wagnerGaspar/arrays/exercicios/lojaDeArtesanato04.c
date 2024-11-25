@@ -43,14 +43,14 @@ void display(float vlUnit[], int quanti[])
    {  
       valorParcial = quanti[i] * vlUnit[i];
       
-      printf("Vendido: %d\tValor Unitario R$ %.2f\tValor total R$ %.2f\n", 
+      printf("Vendido: %d\tValor Unitario R$ %.2f\tTotal vedido R$ %.2f\n", 
                quanti[i], vlUnit[i], valorParcial);
       
       valorTotal += valorParcial;
    } // end for a
 
    // exibe valores
-   printf("\nValor total R$ %.2f\n", valorTotal);
+   printf("\nTotal das vendas R$ %.2f\n", valorTotal);
    printf("Comissão paga ao vendedor R$ %.2f\n", 
             valorTotal * 0.05);
 
@@ -65,7 +65,7 @@ void display(float vlUnit[], int quanti[])
 
    for (int k = 0; k < SIDE; k++) {
       if (quanti[k] == maisVendido)
-         printf("Posicao: %d\tValor R$ %.2f\n", k, vlUnit[k]);
+         printf("O produto mais vendido esta:\nNa posicao: %d\tValor R$ %.2f\n", k, vlUnit[k]);
    } // end for k
 
    // exibe
