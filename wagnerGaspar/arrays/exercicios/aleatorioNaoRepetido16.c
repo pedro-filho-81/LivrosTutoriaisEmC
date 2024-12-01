@@ -21,7 +21,7 @@ void add(int vetor[])
       // vetor recebe valores aleatórios entre 1 e 100
       vetor[i] = 1 + rand() % 50;
 
-      // informa que o valor não é repetido
+      // informa que o valor gerado não é repetido
       igual = 0;
 
       // loop para percorrer  o vetor
@@ -35,7 +35,7 @@ void add(int vetor[])
       } // end for j
 
       // se variável igual for zero
-      if(igual == 0)
+      if(igual == 0) // se verdade
          // incrementa em 1 a variável i
          i++;
    // faz o loop enquanto i menor que o tamanho do vetor
