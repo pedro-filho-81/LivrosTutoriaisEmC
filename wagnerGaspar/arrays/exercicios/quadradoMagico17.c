@@ -54,6 +54,7 @@ void somaLinhas(int matriz[][TAM])
 void somaColunas(int matriz[][TAM])
 {
    int soma = 0;
+   int total = 0;
    int l, c;
 
    // loop para somar as linhas
@@ -64,6 +65,9 @@ void somaColunas(int matriz[][TAM])
          soma += matriz[l][c];
       } // end for l
       printf("A soma da coluna %d eh: %d\n", c, soma);
+      total = soma;
+      if(total != soma)
+         printf("Coluna %d eh diferente!\n");
       soma = 0; // inicializa a soma
    } // end for c
 } // end soma linhas
