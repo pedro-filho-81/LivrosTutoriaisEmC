@@ -1,5 +1,5 @@
 /**
- * Como uzar uma STRUCT em outra STRUCT
+ * Como usar uma STRUCT em outra STRUCT
  * Aula - 169
  */
 #include <stdio.h>
@@ -7,15 +7,17 @@
 
 // cria a estrutura data de nascimento
 typedef struct {
-   /* data */
+   /* campos da estrutura Nascimento */
    int dia, mes, ano;
 }Nascimento;
 
 // cria a estrutura Pessoa
 typedef struct {
    // cria a variável dataNasci da estrutura Nascimento
+   // dentro da estrutura Pessoa
    Nascimento dataNasci;
    
+   // campos da estrutura Pessoa
    int idade;
    char sexo;
    char nome[100];
