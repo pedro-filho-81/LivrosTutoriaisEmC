@@ -25,10 +25,16 @@ int main()
    fgets(pessoa.nome, 100, stdin);
    printf("Digite a idade: ");
    scanf("%d", &pessoa.idade);
-   printf("Digite o sexo: ");
-   scanf(" %c", &pessoa.sexo);
+   scanf("%c"); // para o Enter
 
-   printf("\nCadastro de pessoa\nNome: %sIdade: %d\nSexo: %c",  pessoa.nome, pessoa.idade, pessoa.sexo);
+   // enquanto no digitar o sexo como pedido repita
+   while(pessoa.sexo != 'f' && pessoa.sexo != 'm') {
+      printf("Digite (f ou m) para sexo: ");
+      scanf("%c", &pessoa.sexo);
+   } // end while
+
+   // resultado
+   printf("\nPessoa Cadastrada:\nNome: %sIdade: %d\nSexo: %c",  pessoa.nome, pessoa.idade, pessoa.sexo);
 
    printf("\n\n");
    return 0;
