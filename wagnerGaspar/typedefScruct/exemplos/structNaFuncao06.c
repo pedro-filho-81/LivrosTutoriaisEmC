@@ -37,12 +37,15 @@ Pessoa lerPessoa(Pessoa p)
    fgets(p.nome, 100, stdin);
    printf("Digite a idade: ");
    scanf("%d", &p.idade);
-
-   // enquanto não digitar o sexo como pedido repita
-   while(p.sexo != 'f' && p.sexo != 'm') {
+   
+   do 
+   { // inicio do while
+      // entrada de dados
       printf("Digite (f ou m) para sexo: ");
       scanf(" %c", &p.sexo);
-   } // end while
+
+   // enquanto não digitar o sexo como pedido repita
+   } while(p.sexo != 'f' && p.sexo != 'm');
 
    // entrada da data de nascimento
    printf("Digite a data de nascimento no formato dd, mm, aaaa:");
