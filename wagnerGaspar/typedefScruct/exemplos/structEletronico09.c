@@ -18,7 +18,7 @@ typedef struct {
    // variáveis
    char energia;     // tipo de energia
    int quantidade;   // quantidade no estoque
-   int codigo;       // código do produto
+   char codigo;       // código do produto
 
 } Eletronico; // nome da estrutura
 
@@ -46,7 +46,7 @@ Eletronico lerEletronico(Eletronico e)
    printf("Digite a descricao: ");
    fgets(e.descricao, 500, stdin);
    printf("Quantidade e Codigo: ");
-   scanf("%d%d", &e.quantidade, &e.codigo);
+   scanf("%d%c", &e.quantidade, &e.codigo);
    scanf("%c"); // para o Enter
 
    // retorna a estrutura
@@ -59,13 +59,16 @@ Eletronico lerEletronico(Eletronico e)
 // sendo (e) a variável da estrutura
 void imprimirEletronico(Eletronico e)
 {
-   /*
    // exibe resultado
-   printf("\nPessoa Cadastrada:\nNome: %sIdade: %d\nSexo: %c\n", p.nome, p.idade, p.sexo);
-   
-   printf("Data de nasci: %d/%d/%d\n", 
-   p.dataNasci.dia, p.dataNasci.mes, p.dataNasci.ano);
-   */
+   printf("\nProduto Cadastrado:\n");
+   printf("Tipo: %s", e.tipo);
+   printf("marca: %s", e.marca);
+   printf("Digita a modelo: %s", e.modelo);
+   printf("Eficiencia energetica: %c", e.energia);
+   printf("Digite a descricao: %s", e.descricao);
+   printf("Quantidade no estoque: %d\n", e.quantidade);
+   printf("Codigo: %d\n", e.codigo);
+
 } // end imprimirPessoa
 
 int main()
@@ -81,7 +84,7 @@ int main()
    // chama o procedimento imprimirEletronico
    // que recebe como parâmetro a variável ele
    // do tipo Eletronico
-   // imprimirEletronico(ele);
+   imprimirEletronico(ele);
 
    printf("\n\n");
    return 0;
