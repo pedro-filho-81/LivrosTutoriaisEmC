@@ -17,7 +17,6 @@ int main()
    printf("O numero de byte no array eh: %d"
             "\nO numero de byte retornado de getSizeof eh: %d\n", sizeof(array), getSizeof(array));
 
-
 } // end main
 
 // function
