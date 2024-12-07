@@ -18,12 +18,15 @@ int main()
    int number = 5; // number recebe 5
    
    printf("\nCubo de uma variavel\nusando a chamada por referencia.");
-   printf("\nint number = 5");
+   printf("\nCria a variável:\nint number = 5");
    // exebe o resultado
    printf("\nO valor original de number eh: %d\n", number);
 
-   // number recebe o novo valor retornado 
-   // pela função cubeByReference
+   /** 
+    * A função cubeByReference
+    * recebe como parâmetro o
+    * endereço da variável number
+   */
    cubeBYReference( &number );
 
    printf("Passando o endereço da variavel original\npara funcao por referencia.\n");
