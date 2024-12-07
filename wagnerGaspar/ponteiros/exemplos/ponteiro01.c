@@ -2,6 +2,7 @@
  * O que é e como criar um ponteiro?
  * Ponteiro - é uma variável que guarda um endereço de memória.
  * Possui como conteúdo o endereço de memória de outra variável
+ * Aula - 184
  */
 #include <stdio.h>
 #include <stdlib.h>
