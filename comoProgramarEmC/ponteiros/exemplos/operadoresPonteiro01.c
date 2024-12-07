@@ -16,7 +16,7 @@ int main()
    // atribuição
    a = 7; // variável a recebe valor 7
    // & comercial antes da variável 
-   // informa o endereço
+   // informa o endereço da variável
    aPtr = &a; // ponteiro recebe o endereço de a
 
    printf("\nUsando os operadores & e *\n");
@@ -31,8 +31,8 @@ int main()
          "\nO valor do ponteiro aPtr eh %p\no endereco de a", &a, aPtr);
 
    /**
-    * %d mostra o valor de
-    * a informa o valor da variável a
+    * %d mostra o valor de da variável a 
+    * informa o valor da variável a
     * *aPtr informa o valor da variável a
     * que está vinculada ao ponteiro
     */
