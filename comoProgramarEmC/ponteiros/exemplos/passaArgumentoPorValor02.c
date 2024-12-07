@@ -10,6 +10,7 @@
 #include <stdlib.h>
 
 // prototipo de função
+// passagem por valor
 int cubeBYValue( int n );
 
 int main()
@@ -18,14 +19,17 @@ int main()
    int number = 5; // number recebe 5
    
    printf("\nCubo de uma variavel\nusando a chamada por valor");
-   printf("\nint number = 5");
+   printf("\nCria a variavel do tipo inteira:\nint number = 5");
    // exebe o resultado
    printf("\nO valor original de number eh: %d\n", number);
 
-   // number recebe o novo valor retornado 
-   // pela função cubeByValue
+   // number é usado como parâmetro 
+   // pela função cubeByValue esta
+   // calcula e retorna o cubo do valor de namber
+   // para a própia variável number
    number = cubeBYValue( number );
 
+   // exibe o resultado
    printf("Passando o valor original para funcao.\n");
    printf("number = cubeByValue( number );\n");
    // exibe o resultado
@@ -35,7 +39,8 @@ int main()
 
 } // end main
 
-// function cubeByValue
+// function cubeByValue 
+// recebe um valor e
 int cubeBYValue( int n )
 {
    // retorna n ao cubo
