@@ -13,17 +13,22 @@ int main()
    int a;
    int *aPtr; // ponteiro para inteiro
 
+   printf("\nUsando os operadores & e *\n");
+   printf("\nCria a variavel a:\nint a;\n");
+   printf("Cria um ponteiro para inteiro:\nint *aPtr;");
+
    // atribuição
    a = 7; // variável a recebe valor 7
-   // & comercial antes da variável 
+   printf("\nVariavel a recebe o valor 7:\na = 7;");
+   // O & comercial antes da variável
    // informa o endereço da variável
-   aPtr = &a; // ponteiro recebe o endereço de a
+   aPtr = &a; // O ponteiro aPtr recebe o endereço de a
+   printf("\nO ponteiro aPtr recebe o endereco de a:\naPtr = &a;");
 
-   printf("\nUsando os operadores & e *\n");
    // exibe resultado
    /**
-    * %p mostra o endereço
-    * & antes da variável informa o endereço
+    * %p mostra o endereço no printf("%p")
+    * O & comercial antes da variável informa o endereço
     * &a informa o endereço da variável a
     * aPtr informa o endereço da variável a
     */
