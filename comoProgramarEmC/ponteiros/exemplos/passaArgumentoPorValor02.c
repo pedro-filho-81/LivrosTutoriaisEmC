@@ -19,6 +19,7 @@ int main()
    int number = 5; // number recebe 5
    
    printf("\nCubo de uma variavel\nusando a chamada por valor");
+   printf("\nCria a funcao:\nint cubeBYValue( int n );");
    printf("\nCria a variavel do tipo inteira:\nint number = 5");
    // exebe o resultado
    printf("\nO valor original de number eh: %d\n", number);
