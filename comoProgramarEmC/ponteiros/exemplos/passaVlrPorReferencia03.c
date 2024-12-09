@@ -10,6 +10,9 @@
 #include <stdlib.h>
 
 // prototipo de função
+// diz ao compilado que existe ou
+// vai existir uma função com esse nome
+// e com esye parâmetro (int *nPtr)
 int cubeBYReference( int *nPtr );
 
 int main()
@@ -17,17 +20,18 @@ int main()
    // variável
    int number = 5; // number recebe 5
    
-   printf("\nCubo de uma variavel\nusando a chamada por referencia.");
+   printf("\nCubo de uma variavel\nusando a passagem por suposta referencia.");
    printf("\nCria a variável:\nint number = 5");
+
    // exebe o resultado
    printf("\nO valor original de number eh: %d\n", number);
 
    /** 
     * A função cubeByReference
-    * recebe como parâmetro o
+    * recebe como atributo o
     * endereço da variável number
    */
-   cubeBYReference( &number );
+   // cubeBYReference( &number );
 
    printf("Passando o endereço da variavel original\npara funcao por referencia.\n");
    printf("cubeByReference( &number );\n");
@@ -38,9 +42,13 @@ int main()
 
 } // end main
 
-// function cubeByValue
-int cubeBYReference( int *nPtr )
-{
-   // retorna n ao cubo
-   *nPtr = *nPtr * *nPtr * *nPtr;
-} // end cubeByReference
+/*
+   A função abaixo não existe
+
+   // function cubeByValue
+   int cubeBYReference( int *nPtr )
+   {
+      // retorna n ao cubo
+      *nPtr = *nPtr * *nPtr * *nPtr;
+   } // end cubeByReference
+*/
