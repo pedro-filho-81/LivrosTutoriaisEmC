@@ -74,6 +74,8 @@ int main()
       printf("%5.1f", nPtr[i]);
    } // end for
 
+   printf("F) ");
+
    printf("\n\n");
    return 0;
 
