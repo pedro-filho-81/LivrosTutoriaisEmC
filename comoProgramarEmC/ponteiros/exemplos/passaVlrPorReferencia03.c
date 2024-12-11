@@ -19,9 +19,14 @@ int main()
 {
    // variável
    int number = 5; // number recebe 5
+
+   printf("\nFUNCAO PASSAGE POR REFERENCIA\n");
+
+   printf("Antes de main, cria a funcao:\n"
+         "Que tem como parametro um ponteiro\npara inteiro *nPtr\n"
+         "\tint cubeBYReference( int *nPtr );\n");
    
-   printf("\nCubo de uma variavel\nusando a passagem por suposta referencia.");
-   printf("\nCria a variável:\nint number = 5");
+   printf("Em main, Cria a variável:\n\tint number = 5\nQue eh inicializada com o valor 5.\n");
 
    // exebe o resultado
    printf("\nO valor original de number eh: %d\n", number);
@@ -31,10 +36,15 @@ int main()
     * recebe como atributo o
     * endereço da variável number
    */
-   // cubeBYReference( &number );
+   printf("Em main, chamamos a função:\n"
+            "\tcubeBYReference( &number )\n"
+            "E passamos como atributo &number\n"
+            "O endereco da variavel.\n");
+   
+   cubeBYReference( &number );
 
-   printf("Passando o endereço da variavel original\npara funcao por referencia.\n");
-   printf("cubeByReference( &number );\n");
+   printf("\nA funcao processa e exibe:\n");
+
    // exibe o resultado
    printf("O novo valor de number eh: %d\n\n", number);
 
@@ -42,13 +52,9 @@ int main()
 
 } // end main
 
-/*
-   A função abaixo não existe
-
    // function cubeByValue
    int cubeBYReference( int *nPtr )
    {
       // retorna n ao cubo
       *nPtr = *nPtr * *nPtr * *nPtr;
    } // end cubeByReference
-*/
