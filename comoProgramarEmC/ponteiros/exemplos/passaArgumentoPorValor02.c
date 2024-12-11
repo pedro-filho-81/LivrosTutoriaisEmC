@@ -1,7 +1,7 @@
 /**
  * Passa argumentos para uma função por valor
- * 1 Fig. 7.6: fig07_06.c  
- * 2 Cubo de uma variável usando chamada por valor
+ * Fig. 7.6: fig07_06.c  
+ * Cubo de uma variável usando chamada por valor
  * Deitel, Paul; Deitel, Harvey. C Como Programar 
  * (Portuguese Edition) (p. 212). Edição do Kindle. 
  * 11/10/2024
@@ -17,12 +17,22 @@ int main()
 {
    // variável
    int number = 5; // number recebe 5
-   
-   printf("\nCubo de uma variavel\nusando a chamada por valor");
-   printf("\nCria a funcao:\nint cubeBYValue( int n );");
-   printf("\nCria a variavel do tipo inteira:\nint number = 5");
+
+      printf("\nPASANDO VALORES PARA FUNCAO POR VALOR");
+   printf("\nAntes de main, cria a funcao:\t"
+            "\n\tint cubeBYValue( int n );");
+
+   printf("\nEm main, cria a variavel:\n\tint number = 5;\n");
+
    // exebe o resultado
-   printf("\nO valor original de number eh: %d\n", number);
+   printf("Em main, O valor original de number eh: %d\n", number);
+
+   printf("\nEm main, chama a funcao:\n"
+         "E passa como argumento a variavel number\n"
+         "\tcubeByValue( number );\n");
+
+   printf("A funcao processa o valor de number\n"
+         "E retorna o valor processado para number:\n");
 
    // number é usado como parâmetro 
    // pela função cubeByValue esta
@@ -31,10 +41,10 @@ int main()
    number = cubeBYValue( number );
 
    // exibe o resultado
-   printf("Passando o valor original para funcao.\n");
-   printf("number = cubeByValue( number );\n");
+   printf("\tnumber = cubeByValue( number );\n");
+
    // exibe o resultado
-   printf("O novo valor de number eh: %d\n\n", number);
+   printf("number agora vale: %d\nque eh o cubo de 5\n\n", number);
 
    return 0;
 
