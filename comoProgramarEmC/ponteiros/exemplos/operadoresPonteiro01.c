@@ -45,8 +45,8 @@ int main()
          "\nO *aPtr mostra o valor %d\nda variavel a\n", a, *aPtr);
 
    printf("\nmostrando que * e & sao complementos um "
-            "do outro\n&*aPtr = %p"
-            "\n*&aPtr = %p\n\n", &*aPtr, *&aPtr);
+            "do outro\n&*aPtr = %p mostra o endereco de a"
+            "\n*&aPtr = %p tambem exibe o endereco de a\n\n", &*aPtr, *&aPtr);
 
    return 0;
 
