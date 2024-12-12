@@ -17,15 +17,15 @@ int main()
    char string[] = "Imprime caracteres de uma String.";
 
    printf("\nCria a variavel strint:\n");
-   printf("char string[] = \"Imprime caracteres de uma String.\";");
-   printf("\nExibe a string original eh: %s\n", string);
+   printf("\tchar string[] = \"Imprime caracteres de uma String.\";");
+   printf("\nExibe a string original eh: \n\t%s\n", string);
 
-   printf("\nCria a funcao:\nvoid printCaracters( const char *sPtr);\n");
-   printf("Que tem como parametro: const char *sPtr\n");
-   printf("\nChama a funcao: printCaracters( string );\ne passa a variavel string:\n");
+   printf("\nCria a funcao:\n\tvoid printCaracters( const char *sPtr);\n");
+   printf("Que tem como parametro:\n\tconst char *sPtr\n");
+   printf("\nChama a funcao:\n\tprintCaracters( string );\ne passa a variavel string:\n");
    printCaracters( string );
 
-   printf("\nA string maiuscula eh: \n%s\n\n", string);
+   printf("\nA string maiuscula eh: \n\t%s\n\n", string);
 
    printf("A palavra chave (const) na função,\nnao permite a alteracao no valor da string.\n");
 
