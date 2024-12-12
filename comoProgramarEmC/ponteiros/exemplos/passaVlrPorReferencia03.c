@@ -26,27 +26,25 @@ int main()
          "Que tem como parametro um ponteiro\npara inteiro *nPtr\n"
          "\tint cubeBYReference( int *nPtr );\n");
    
-   printf("Em main, Cria a variável:\n\tint number = 5\nQue eh inicializada com o valor 5.\n");
-
-   // exebe o resultado
-   printf("\nO valor original de number eh: %d\n", number);
+   printf("\nEm main, Cria a variável:\n\tint number = 5\nQue eh inicializada com o valor 5.\n");
 
    /** 
     * A função cubeByReference
     * recebe como atributo o
     * endereço da variável number
    */
-   printf("Em main, chamamos a função:\n"
-            "\tcubeBYReference( &number )\n"
+   printf("\nEm main, chamamos a função:\n"
             "E passamos como atributo &number\n"
-            "O endereco da variavel.\n");
+            "Que eh o endereco da variavel.\n"
+            "\tcubeBYReference( &number )\n"
+            );
    
    cubeBYReference( &number );
 
-   printf("\nA funcao processa e exibe:\n");
+   printf("\nA funcao processa e retorna:\n");
 
    // exibe o resultado
-   printf("O novo valor de number eh: %d\n\n", number);
+   printf("O novo valor de number que eh: %d\n\n", number);
 
    return 0;
 
