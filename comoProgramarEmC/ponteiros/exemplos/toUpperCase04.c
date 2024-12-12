@@ -14,14 +14,27 @@ void convertToUpperCase( char *sPtr );
 
 int main()
 {
+   printf("\nAntes de main: Criamos o procedimento:"
+            "\nQue recebe como parametro o ponteiro"
+            "\nchar *sPtr ponteiro para caracteres."
+            "\n\tvoid convertToUpperCase( char *sPtr );\n");
+
    // variável
    char string[] = "caracteres e R$32.98";
 
-   printf("\nA string antes da conversao eh: %s\n", string);
+   printf("\nEm main, Criamos um vetor de caracteres"
+            "\nque recebe a string: \"caracteres e R$32.98\";"
+            "\n\tchar string[] = \"caracteres e R$32.98\";\n");
+
+   printf("\nA string antes do processamento eh minuscula:\n\t%s\n", string);
+   printf("\nEm main, Chamamos o procedimento:"
+            "\n\tconvertToUpperCase(string);"
+            "\nQue recebe como argumento o vetor string");
 
    convertToUpperCase(string);
 
-   printf("A string apos a conversao eh: %s\n\n", string);
+   printf("\n\nO procedimento apos o processamento"
+            "\nfaz a conversao dos caracteres para maiuscula: \n\t%s\n\n", string);
 
    return 0;
 
