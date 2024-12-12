@@ -31,7 +31,7 @@ int main()
          "E passa como argumento a variavel number\n"
          "\tcubeByValue( number );\n");
 
-   printf("A funcao processa o valor de number\n"
+   printf("\nA funcao processa o valor de number\n"
          "E retorna o valor processado para number,\n"
          "number recebe o valor retornado da funcao:\n");
 
@@ -45,7 +45,7 @@ int main()
    printf("\tnumber = cubeByValue( number );\n");
 
    // exibe o resultado
-   printf("number agora vale: %d\nque eh o cubo de 5\n\n", number);
+   printf("\nnumber agora vale: %d\nque eh o cubo de 5\n\n", number);
 
    return 0;
 
