@@ -32,7 +32,8 @@ int main()
          "\tcubeByValue( number );\n");
 
    printf("A funcao processa o valor de number\n"
-         "E retorna o valor processado para number:\n");
+         "E retorna o valor processado para number,\n"
+         "number recebe o valor retornado da funcao:\n");
 
    // number é usado como parâmetro 
    // pela função cubeByValue esta
