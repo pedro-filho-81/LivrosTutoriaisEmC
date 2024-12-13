@@ -26,7 +26,7 @@ int main()
    // ptr = &y; // proibido ptr não pode receber outro endereço
    printf("\nTenta passar o endereco de y ao ponteiro:\n\tptr = &y;\n");
    
-   printf("ptr nao pode receber outro endereÃ§o\n");
+   printf("ptr nao pode receber outro endereco\n");
    
    printf("error: assignment of read-only variable 'ptr'");
 
