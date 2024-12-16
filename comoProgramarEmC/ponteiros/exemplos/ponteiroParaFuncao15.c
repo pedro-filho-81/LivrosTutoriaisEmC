@@ -78,7 +78,7 @@ void bubble(int work[], const int size, int (*compare)(int a, int b))
    {
       for ( counter = 0; counter < size - 1; counter++)
       {  
-         if ((work[counter] > work[counter + 1]))
+         if ((*compare)(work[counter], work[counter + 1]))
          {
             inverte(&work[counter], &work[counter + 1]);
          } // end if
