@@ -16,6 +16,7 @@ int main()
    /**
     * inicializa array de 3 ponteiros para funções
     * que usam um argumento int que retorna void
+    * O array f é inicializado com os nomes das três funções
     */
    void (*f[3])(int) = {function1, function2, function3};
 
