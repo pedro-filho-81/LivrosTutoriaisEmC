@@ -1,6 +1,6 @@
 /**
  * Como criar um ponteiro para struct?
- * Aula - 189
+ * Aula - 190
  * Toda variável está associada a uma região de memória.
  * Assim, é possivel obter o endereço 
  * de qualquer variável e criar um ponteiro para 
@@ -8,7 +8,7 @@
  */
 #include <stdio.h>
 
-// cria a estrutura data
+// cria a estrutura Data
 typedef struct
 {
    // variáveis(campos)
@@ -16,8 +16,11 @@ typedef struct
 }Data; // nome da estrutura
 
 /**
- * Cria o procedimento que recebe um ponteiro do
- * tipo Data e exibe a data na tela.
+ * Cria o procedimento imprimirData que tem como
+ * parâmetro o ponteiro *xPtr do tipo Data que
+ * recebe como argumento o endereço da variável do 
+ * tipo Data.
+ * Aula - 190
 */
 void imprimirData(Data *xPtr)
 {
@@ -33,6 +36,7 @@ int main()
 {
    printf("\nCria o procedimento:\n\tvoid imprimirData(Data *xPtr)"
          "\nQue tem como parametro um ponteiro.\n");
+   
    // cria a variável do tipo Data
    Data data;
    printf("Em main:\nCriamos a variavel do tipo Data:\n\tData data;");
@@ -40,9 +44,11 @@ int main()
    // cria um ponteiro do tipo Data
    Data *dataPtr;
    printf("\nDepois criamos o ponteiro:\n\tData *dataPtr;");
+   
    // atribui o enderaço da variável data 
-   // ao ponteiro *dataPtr
+   // ao ponteiro *dataPtr do tipo Data
    dataPtr = &data;
+
    printf("\nApos atribuimos ao ponteiro o enderaco de data:\n\tdataPtr = &data;"
             "\nApos exibimos:");
 
@@ -59,6 +65,7 @@ int main()
 
    printf("\nChamamos o procedimento:\n\timprimirData(dataPtr);\ne passamos como argumento o ponteiro.\n\tdataPtr");
 
+   // exibe resultado
    printf("\nE exibimos a data:\n\t%d/%d/%d\nprocessada pelo procedimento.", data.dia, data.mes, data.ano);
 
    printf("\n\n");
