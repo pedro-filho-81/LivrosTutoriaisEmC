@@ -4,7 +4,7 @@
  * uma string com a função scanf()?
  * Todo vetor é um ponteiro.
  * Por isso, não precisamos passar o endereço 
- * do vetor do tipo char (strind) na função scanf()
+ * do vetor do tipo char (string) na função scanf()
  * Exemplo: scanf("%100[^\n]", <nome do vetor string>)
  * Aula 186.
  */
