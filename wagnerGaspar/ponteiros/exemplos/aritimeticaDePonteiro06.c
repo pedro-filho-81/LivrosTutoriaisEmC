@@ -1,5 +1,6 @@
 /**
- * 
+ * Entendendo aritimética de ponteiros com vetor
+ * Aula - 189 
  */
 #include <stdio.h>
 #include <stdlib.h>
