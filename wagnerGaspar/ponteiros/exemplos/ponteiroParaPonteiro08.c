@@ -41,8 +41,8 @@ int main()
    printf("\nEndereco de c eh %p\tConteudo de c eh: %p endereco de b", &c, c);
 
    printf("\n\nExibindo o valor da variavel A:");
-   printf("\nO valor de a eh: %d\nO valor apontado pelo ponteiro *b eh: %d", a, *b);
-   printf("\nO valor apontado pelo ponteiro\npara ponteiro **c eh: %d", **c);
+   printf("\nO valor de a eh: %d\nO valor apontado pelo ponteiro *b eh: %d", a, *b); 
+   printf("\nO valor apontado pelo ponteiro para ponteiro **c eh: %d", **c);
 
    printf("\n\n");
    return 0;
