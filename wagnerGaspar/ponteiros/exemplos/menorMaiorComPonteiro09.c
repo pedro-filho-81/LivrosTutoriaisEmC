@@ -36,10 +36,26 @@ void menorMaior(int *vetor, int *menor, int *maior)
    } // end for    
 } // end maior menor
 
+// imprimir
+void imprimir(int *vetor)
+{
+   // variável
+   int i;
+   // loop for para exibir os valores do vetor
+   for ( i = 0; i < SIZE; i++)
+   {
+      // exibe os valores do vetor
+      // usando aritimética de ponteiros
+      printf("%4d", *(vetor + i));
+   } // end for   
+} // end imprimir
+
 int main()
 {
    // cria o vetor
    int vetor[SIZE] = {12,20,25,95,45,68,18,100,74,32};
+   printf("\nVetor original:\n");
+   imprimir(vetor);
 
    // cria as variáveis ponteiros
    int *menor, *maior;
