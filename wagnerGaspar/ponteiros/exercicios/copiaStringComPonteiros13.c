@@ -1,4 +1,4 @@
-/**
+1/**
  * Exercício 05
  * Implemente uma função strcpy(char *destino, char *origem) usando ponteiros
  * Aula - 196
