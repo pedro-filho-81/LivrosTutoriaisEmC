@@ -23,7 +23,7 @@ int main()
    int linha = 0, coluna = 0;
    int menorRow = 0, menorCol = 0;
 
-   srand(time(NULL));
+   srand(time(NULL)); // semente para rand()
 
    // adiciona valor a matriz
    for ( i = 0; i < ROW; i++)
@@ -36,26 +36,34 @@ int main()
       } // end for j
    } // end for i
 
-   if (i == 0 && j == 0)
+   // verifica se i e j são iguais a zero
+   if (i == 0 && j == 0) // se verdade
    {
+      // maior e menor recebe o valor da matriz
       maior = matrizA[i][j];
       menor = matrizA[i][j];
-   }
+   } // end if
    
+   // loop para o maior valor
    for ( i = 0; i < ROW; i++)
    {
       for ( j = 0; j < COLUmN; j++)
       {
-         if (matrizA[i][j] > maior)
+         // verifica se o valor da matriz é maior que 
+         // a variável maior
+         if (matrizA[i][j] > maior) // se verdade
          {
+            // maior recebe o valor da matriz
             maior = matrizA[i][j];
             linha = i;
             coluna = j; 
          } // end if
          
          // menor valor
-         if (matrizA[i][j] < menor)
+         // se o valor da matriz vor menor que o valor menor
+         if (matrizA[i][j] < menor) // se verdade
          {
+            // menor recebe o valor da matriz
             menor = matrizA[i][j];
             menorRow = i;
             menorCol = j; 
