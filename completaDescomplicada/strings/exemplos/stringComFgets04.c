@@ -31,7 +31,7 @@ int main()
    printf("\nA funcao fgets() recebe tres parametros de entrada:"
       "\n1 - str: a string a ser lida."
       "\n2 - tamanho: o limite maximo de caracteres a serem lidos."
-       "\n3 - fp: a variavel que esta associada ao arquivo de onde \n        a string sera lida.");
+       "\n3 - fp: a variavel que esta associada ao arquivo de onde \na string sera lida.");
 
    printf("\n\n");
    return 0;
