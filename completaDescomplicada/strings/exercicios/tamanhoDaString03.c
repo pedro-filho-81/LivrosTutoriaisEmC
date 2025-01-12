@@ -21,6 +21,8 @@ int main()
    // limpa o buffer do teclado
    setbuf(stdin, NULL);
 
+   printf("\nConta os caracteres da string:\n");
+   
    // entrada de dados
    printf("\nDigite uma palavra ou um texto: ");
    fgets(str, SIZE, stdin);
@@ -40,7 +42,7 @@ int main()
    } // end for
 
    // exibe resultado
-   printf("\nVoce digitou: %s\nTem %d caracteres.\n", str, contar);
+   printf("\nVoce digitou: %s\nA string Tem %d caracteres.\n", str, contar);
 
    printf("\n\n");
    return 0;
