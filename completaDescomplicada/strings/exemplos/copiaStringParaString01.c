@@ -11,7 +11,8 @@ int main()
    char str1[20] = "Hello World!";
    char str2[20];
 
-   printf("\nstr1[20] = \"%s\"\n", str1);
+   printf("\nCopia str1 para str2 usando o loop for,\n");
+   printf("\nOriginal:\nstr1[20] = \"%s\"\n", str1);
 
    // loop para copiar a str1 para str2
    // faça enquanto str1 diferente de fim da string
@@ -25,7 +26,7 @@ int main()
    str2[i] = '\0';
 
    // exibe resultado
-   printf("\nstr2[20] = \"%s\"\n", str2);
+   printf("\nCopia de str1:\nstr2[20] = \"%s\"\n", str2);
    
    printf("\n\n");
    return 0;
