@@ -18,6 +18,8 @@ int main()
    int i = 0;
    int contar = 0;
 
+   printf("\nInverta a string digitada:\n");
+
    // limpa o buffer do teclado
    setbuf(stdin, NULL);
 
@@ -43,7 +45,7 @@ int main()
    } // end for
 
    // exibe resultado
-   printf("\nVoce digitou:\n\t%sTem %d caracteres.\n", str1, contar);
+   printf("\nVoce digitou:\n\t%sA string Tem %d caracteres.\n", str1, contar);
 
    printf("\n\n");
    return 0;
