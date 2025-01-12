@@ -16,6 +16,7 @@ int main()
    printf("\nDigite uma palavra ou um texto: ");
    fgets(texto, 5, stdin);
 
+   printf("\nImprime apenas os 4 primeiros digitosda string\n");
    // exibe resultado
    printf("\nVoce digitou: %s", texto);
 
