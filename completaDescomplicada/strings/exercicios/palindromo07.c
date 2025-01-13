@@ -55,8 +55,12 @@ int main()
       } // end else if vogais
       
       // verifica se é um palindromo
+      // se a primeira letra for igual a última
+      // exp.: osso -> o == o, s == s => é palíndromo
+      // rever -> r == r, e == e => é palínromo
       else if(str1[i] == str1[strlen(str1) - 2 - i])
       {
+         // conta às letras
          palindromo++;
       } // end else if palindromo
 
