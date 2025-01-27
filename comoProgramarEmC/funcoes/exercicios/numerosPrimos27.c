@@ -24,7 +24,7 @@ int main()
     setlocale( LC_ALL, "Portuguese" );
 
     // loop para verifica quantos números primos tem até 10000
-    for( int i = 1; i <= 10000; i++ ) {
+    for( int i = 1; i <= 100; i++ ) {
 
         // chama a função números primos
         numerosPrimos( i );
