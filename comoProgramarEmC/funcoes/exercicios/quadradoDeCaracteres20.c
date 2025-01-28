@@ -24,8 +24,10 @@ int main() { // início main
 	int n = 0;
 	int tipo = 0;
 
+  printf("\nDESENHA Um QUADRADO DE CARACTERES \n\t1 = @\n\t2 = *\n\t3 = %%\n\t4 = &\n\t5 = #\n");
+
 	// entrada de dados
-	printf("Digite um número: ");
+	printf("Digite a quantidade de símbolos: ");
 	scanf("%d", &n);
 	printf("Digite o tipo desejado: ");
 	scanf("%d", &tipo);
@@ -34,7 +36,7 @@ int main() { // início main
 	quadrado(n, tipo); // n determina o tamanho do quadrado
 
 	// Pausa o sistema
-	system("pause");
+	// system("pause");
 
 	 // fim do programa
 	return 0;
@@ -55,7 +57,7 @@ void quadrado(int quanti, int tipo) {
         printf(" * "); // imprime asterisco
       } // fim else if
       else if(tipo == 3){
-        printf(" & "); // imprime & comercial
+        printf(" %% "); // imprime % comercial
       } // fim else if
       else if(tipo == 4){
         printf(" ! "); // imprime ponto de Esclamação
