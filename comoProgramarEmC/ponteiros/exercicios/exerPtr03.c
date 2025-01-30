@@ -1,4 +1,10 @@
 /**
+ * 7.3 Resolva cada um dos itens a seguir. Suponha que os 
+ * números em ponto flutuante com precisão simples sejam  
+ * armazenados em 4 bytes, e que o endereço inicial do array 
+ * esteja no local 1002500 na memória. Cada parte do  
+ * exercício deverá usar os resultados das partes 
+ * anteriores,  se isso for apropriado. 
  * a) Defina um array do tipo float chamado numbers com 
  * 10 elementos, e inicialize os elementos  com os 
  * valores 0.0, 1.1, 2.2,..., 9.9. Suponha que a 
@@ -39,7 +45,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SIZE 10
+#define SIZE 10 // tamanho do array
 
 int main()
 {
@@ -50,7 +56,7 @@ int main()
 
    // exibe resultado
    printf("\nA) Cria array, tipo float com 10 elementos.\n");
-   printf("float number[SIZE] = {0.0, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};");
+   printf("float number[SIZE] = {0.0, 1.  1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9};");
 
    printf("\nB) Cria o ponteiro nPtr:");
    printf("\nfloat *nPtr = number;");
@@ -58,8 +64,11 @@ int main()
    printf("\nC) Imprime os valores do array:\n");
    for (int i = 0; i < SIZE; i++)
    {
-      /* imprime valores do array */
-      printf("%5.1f", numbers[i]);
+      /* 
+         imprime valores do array
+         usando aritimética de ponteiros
+      */
+      printf("%5.1f", *(numbers + i));
    } // end for
    
    printf("\nD) Endereco do array numbers: %p", numbers);
@@ -71,10 +80,11 @@ int main()
    for (int i = 0; i < SIZE; i++)
    {
       // exibe os valores do array via ponteiro
+      // com 5 espaços e 1 valor decimal
       printf("%5.1f", nPtr[i]);
    } // end for
 
-   printf("F) ");
+   printf("\nF) ");
 
    printf("\n\n");
    return 0;
