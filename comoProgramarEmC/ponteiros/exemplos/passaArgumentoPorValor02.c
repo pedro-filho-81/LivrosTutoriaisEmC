@@ -18,7 +18,7 @@ int main()
    // variável
    int number = 5; // number recebe 5
 
-      printf("\nPASANDO VALORES PARA FUNCAO POR VALOR");
+   printf("\nPASANDO VALORES PARA FUNCAO POR VALOR");
    printf("\nAntes de main, cria a funcao:\t"
             "\n\tint cubeBYValue( int n );");
 
