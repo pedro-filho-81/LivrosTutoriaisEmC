@@ -13,17 +13,20 @@ int main()
    int a;
    int *aPtr; // ponteiro para inteiro
 
-   printf("\nUsando os operadores & e *\n");
-   printf("\nCria a variavel a:\nint a;\n");
-   printf("Cria um ponteiro para inteiro:\nint *aPtr;");
+   printf("\nUsando os operadores & e *");
+   printf("\nCria a variavel a:\n\tint a;\n");
+   printf("Cria um ponteiro para inteiro:\n\tint *aPtr;");
 
    // atribuição
    a = 7; // variável a recebe valor 7
-   printf("\nVariavel a recebe o valor 7:\na = 7;");
+   printf("\nO sinal ( = ) atribuio o valor que esta a direita"
+            "\na variavel que esta a esquerda."
+            "\nAbaixo, estamos atribuindo o valor 7 a Variavel ( a ):"
+            "\n\ta = 7; // le-se: a recebe o valor 7");
    // O & comercial antes da variável
    // informa o endereço da variável
    aPtr = &a; // O ponteiro aPtr recebe o endereço de a
-   printf("\nO ponteiro aPtr recebe o endereco de a:\naPtr = &a;");
+   printf("\nO ponteiro aPtr recebe o endereco de a:\n\taPtr = &a;");
 
    // exibe resultado
    /**
@@ -33,7 +36,7 @@ int main()
     * aPtr informa o endereço da variável a
     */
    printf("\nO &a mostra o endereco de a %p"
-         "\nO valor do ponteiro aPtr eh %p\no endereco de a", &a, aPtr);
+         "\nO valor do ponteiro aPtr eh %p\n\to endereco de a", &a, aPtr);
 
    /**
     * %d mostra o valor de da variável a 
