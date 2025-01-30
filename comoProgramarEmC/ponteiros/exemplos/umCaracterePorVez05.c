@@ -36,14 +36,15 @@ int main()
 
 // function printCaracters
 /**
- * sPtr não pode ser modificar o caractere ao qual aponta.
- * ou seja, é um ponteoro aponta para 
+ * (*sPtr) não pode modificar o caractere ao qual aponta.
+ * ou seja, é um ponteiro que aponta para o tipo caracteres 
  */
 void printCaracters( const char *sPtr )
 {
    // loop for pela string inteira
    for ( ; *sPtr != '\0'; sPtr++)
    {
+      // imprime os caracteres do conteúdo apontado pelo ponteiro
       printf("%2c", *sPtr);
    } // sptr   
    
