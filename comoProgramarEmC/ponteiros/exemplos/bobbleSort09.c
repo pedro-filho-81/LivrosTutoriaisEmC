@@ -17,17 +17,18 @@ void bobbleSort(int *const vetor[], const int size);
 
 int main()
 {
-   // vetor
+   // cria o vetor
    int vetor[SIZE] = {2, 6, 4, 8, 10, 12, 89, 68, 45, 37};
 
    // variável
-   int i = 0; // contador
+   int i = 0; // contador recebe zero
 
    printf("Itens de dados na ordem original:\n");
 
    // loop for para exibir vetor
    for ( i = 0; i < SIZE; i++)
    {
+      // exibe os elementos do vetor
       printf("%4d", vetor[i]);
    } // end for
 
@@ -39,6 +40,7 @@ int main()
    // loop for para exibir o vetor ordenado
    for ( i = 0; i < SIZE; i++)
    {
+      // exibe o valor ordenado do vetor
       printf("%4d", vetor[i]);
    } // end for
    
