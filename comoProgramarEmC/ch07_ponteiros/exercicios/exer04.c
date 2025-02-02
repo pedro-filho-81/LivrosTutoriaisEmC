@@ -28,9 +28,10 @@ int main()
    float number1 = 5.0;
    float number2;
 
-   printf("\nDefina um variavel float chamado number1 e number2 sem valor:");
+   printf("\nSuponha que as variáveis ​​float number1 e number2 sejam"
+         "\ndefinidas e que number1 seja inicializada como 7.3.");
    
-   printf("\n\tfloat number01 = 5;\n\tfloat number02;\n");
+   printf("\n\tfloat number1 = 5;\n\tfloat number2;\n");
 
    printf("\na) Defina a variável fPtr para ser um ponteiro para um objeto do tipo float.\n\tfloat *fPtr;\n");
    float *fPtr;
