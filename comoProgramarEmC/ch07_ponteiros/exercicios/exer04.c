@@ -51,7 +51,7 @@ int main()
    printf("\nf) Imprima o endereço de number1. Use a especificação de conversão %%p.");
    printf("\n\tEndereco de number1 = %p\n", &number1);
 
-   printf("\ng) Imprima o endereço armazenado em fPtr. \nUse o especificador de conversão %%p. \nO valor impresso é o mesmo que o endereço de number1?\n\tEndereço apontato por fPtr = %p", fPtr);
+   printf("\ng) Imprima o endereço armazenado em fPtr. \nUse o especificador de conversão %%p. \nO valor impresso é o mesmo que o endereço de number1?\n\tEndereço apontado por fPtr = %p", fPtr);
 
    printf("\n\n");
 
